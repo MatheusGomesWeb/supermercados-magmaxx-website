@@ -1,0 +1,35 @@
+$componentName: 'l-header';
+
+// Header
+.#{$componentName} {
+  display: flex;
+  flex-direction: column;
+
+  @include d(mobile) {
+    text-align: center;
+  }
+
+  // Area da logo e o botão
+  &__top {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    padding: rem(30) 0;
+
+    @include d(mobile) {
+      flex-direction: column;
+    }
+  }
+
+  // Logo
+  &__logo {
+    width: 100%;
+
+    @include d(mobile) {
+      width: 90%;
+      margin-bottom: 1rem;
+    }
+  }
+}

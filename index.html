@@ -4,14 +4,249 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Magmax Supermercados</title>
+
+  <link rel="stylesheet" href="./dist/css/style.min.css">
+
+  <link rel="shortcut icon" href="./dist/img/logo.png" type="image/x-icon">
 </head>
 
 <body>
-  test
+
+  <!--header-->
+  <header class="l-header">
+
+    <div class="l-header__top">
+      <a href="#">
+        <img src="./dist/img/logo.png" alt="Magmax Logo" class="l-header__logo">
+      </a>
+
+      <a href="#">
+        <div class="c-button">
+          <div class="c-button__border">
+            <img src="./dist/img/download.svg" alt="baixe" class="c-button__icon">
+            <span class="c-button__text">baixe nosso app</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- NAV MENU -->
+    <nav class="c-menu">
+      <ul class="c-menu__list u-container">
+        <li class="c-menu__item"><a href="home.html">início</a></li>
+        <li class="c-menu__item"><a href="empresa.html">a empresa</a></li>
+        <li class="c-menu__item"><a href="nossas-lojas.html">nossas lojas</a></li>
+        <li class="c-menu__item"><a href="cartao.html">cartão magmaxx</a></li>
+        <li class="c-menu__item"><a href="dicas.html">dicas</a></li>
+        <li class="c-menu__item"><a href="contato.html">contato</a></li>
+      </ul>
+    </nav>
+    <!-- /NAV MENU -->
+  </header>
+  <!--header-->
+
+  <!--main-->
+  <main class="l-main">
+
+    <!--slide-->
+    <section class="c-slide">
+      <div class="c-slide__imagens">
+        <img src="./dist/img/slide/1.jpg">
+        <img src="./dist/img/slide/2.jpg">
+        <img src="./dist/img/slide/3.jpg">
+      </div>
+
+      <div class="c-slide__bullets">
+        <div class="c-slide__bullets-item"></div>
+        <div class="c-slide__bullets-item"></div>
+        <div class="c-slide__bullets-item"></div>
+        <div class="c-slide__bullets-item"></div>
+      </div>
+
+    </section>
+    <!--slide-->
+
+  </main>
+  <!--main-->
+
+  <div id="flex-wrapper">
+
+    <main>
+
+      <div class="pages-wrapper-section">
+        <!-- CARD -->
+        <div class="card-wrapper">
+          <div class="card">
+            <h1 class="a-empresa-new-sc">a empresa</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+              labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo
+              viverra
+              maecenas accumsan lacus vel facilisis.
+
+              <br>
+
+              <a href="#"><img src="./dist/img/ver.png" alt="leia mais" class="leia-mais"></a>
+
+            </p>
+          </div>
+          <div class="card">
+            <h1>nossas lojas</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+              labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo
+              viverra
+              maecenas accumsan lacus vel facilisis.
+
+              <br>
+
+              <a href="#"><img src="./dist/img/ver.png" alt="leia mais" class="leia-mais"></a>
+
+            </p>
+          </div>
+          <div class="card">
+            <h1>dicas</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+              labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo
+              viverra
+              maecenas accumsan lacus vel facilisis.
+
+              <br>
+
+              <a href="#"><img src="./dist/img/ver.png" alt="leia mais" class="leia-mais"></a>
+
+            </p>
+          </div>
+        </div>
+        <!-- /CARD -->
+      </div>
+      <!--pages-wrapper-section-->
+
+      <!-- CLUBE -->
+      <div class="clube">
+        <img src="./dist/img/clube.jpg" alt="clube">
+      </div>
+      <!-- /CLUBE -->
+
+      <!--OFERTAS-->
+      <div class="ofertas">
+
+        <h1>
+          <img src="./dist/img/ofertas.png" alt="nossas ofertas">
+        </h1>
+
+        <div class="card-wrapper">
+          <div class="card" id="lightGallery">
+            <a href="./dist/img/ofertas/of1.jpg">
+              <img src="./dist/img/ofertas/of1.jpg" alt="oferta">
+            </a>
+            <a href="./dist/img/ofertas/of2.jpg">
+              <img src="./dist/img/ofertas/of2.jpg" alt="oferta">
+            </a>
+          </div>
+          <!--  <div class="card" id="lightGallery">
+                        <a href="./dist/img/ofertas/of2.jpg">
+                            <img src="./dist/img/ofertas/of2.jpg" alt="oferta">
+                        </a>
+                    </div>-->
+        </div>
+      </div>
+      <!--/ OFERTAS-->
+    </main>
+
+    <footer>
+      <div class="card-wrapper">
+        <div class="card">
+          <h1>Conheça nossas lojas</h1>
+          <p>
+          <ul>
+            <li class="li-active">pariquera - açú <span>loja 01</span> </li>
+            <li>Av. Dr. Av. Carlos Botelho, 627 - Centro</li>
+            <li>Tel.: (13) 3856-1930</li>
+            <br>
+            <li class="li-active">iguape <span>loja 02</span></li>
+            <li>R. Euclydes Roque Bastos, 12 - Centro</li>
+            <li>Tel.: (13) 3841-1123</li>
+            <br>
+            <li class="li-active">pariquera - açú <span>loja 03</span></li>
+            <li>Av. Dr. Carlos Botelho, 260 - Centro</li>
+            <li>Tel.: (13) 3856-1032</li>
+          </ul>
+          </p>
+        </div>
+        <div class="card">
+
+          <h1>Entregas em domicílio</h1>
+
+          <div class="entregas-car">
+            <div style="text-transform: uppercase; font-size: 1.2em;">
+              verifique <br>
+              disponibilidade <br>
+              e condições <br>
+              em cada loja
+            </div>
+            <div>
+              <img src="./dist/img/carrinho.png" alt="caminhao">
+            </div>
+          </div>
+
+          <br>
+          <div>
+
+            <table>
+              <tr>
+                <td><a href="#" target="_blank"><img src="./dist/img/face.png" alt="facebook"></a>
+                </td>
+                <td><a href="#" target="_blank">&nbsp;&nbsp;supermercadosmagmaxx</a></td>
+              </tr>
+            </table>
+
+          </div>
+          <br>
+          <div>
+
+            <table>
+              <tr>
+                <td><a href="#" target="_blank"><img src="./dist/img/insta.png" alt="instagram"></a>
+                </td>
+                <td><a href="#" target="_blank">&nbsp;&nbsp;supermercadosmagmaxx</a></td>
+              </tr>
+            </table>
+
+          </div>
+
+        </div>
+        <div class="card">
+          <h1>Aceitamos em Cartões</h1>
+          <p>
+            <img src="./dist/img/card.png" alt="formas de pagamentos" style="width: 100%;"> <br><br>
+
+            <span style="float: left;">Consulte as outras opções</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="card-wrapper footer-bottom">
+        <div class="card">
+          <p>todos direitos reservados
+            <br>
+            <strong>Supermercados Magmaxx</strong>
+          </p>
+        </div>
+        <div class="card">
+          <p>
+            <strong>desenvolvido por</strong>
+            <img src="./dist/img/logocr.png" alt="logocrcom">
+          </p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <!-- JS -->
+  <script src="./dist/js/bundle.js"></script>
 </body>
-
-
-<script src="./dist/js/bundle.js"></script>
 
 </html>

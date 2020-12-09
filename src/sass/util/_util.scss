@@ -1,0 +1,16 @@
+// Limita e centraliza os elementos para ficar sempre centralizado no monitor e não grudar nos cantos da tela
+.u-container {
+  margin: 0 auto;
+
+  @include d(tablet-up) {
+    max-width: $desktop-up + px;
+  }
+
+  @include d(desktop) {
+    max-width: $desktop + px;
+  }
+
+  @include d(desktop-up) {
+    max-width: $desktop-up + px;
+  }
+}

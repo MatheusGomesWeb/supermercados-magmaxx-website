@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $montserrat;
+  height: 100%;
+  font-size: rem(16);
+}
+
+// Hover geral
+a:hover {
+  transition: 0.3s;
+}

@@ -1,0 +1,58 @@
+$componentName: 'c-button';
+
+// Botão com efeito virado
+.#{$componentName} {
+  position: relative;
+  width: 270px;
+  height: 44px;
+  background: $laranja;
+  border-radius: rem(8);
+
+  // hover do botao
+  &:hover {
+    opacity: 0.9;
+    transition: 0.3s;
+  }
+
+  // altera tamanho do botao no mobile
+  @include d(mobile) {
+    width: 250px;
+  }
+
+  // borda verde virada no botao
+  &__border {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 0px;
+    right: 0;
+    bottom: 0;
+    border-radius: rem(8);
+    position: absolute;
+    background: none;
+    border: 3px solid $verde;
+    transform: rotateZ(-1.8deg);
+  }
+
+  // icone que fica do lado do texto (download)
+  &__icon {
+    width: 40px;
+    height: 25px;
+    position: relative;
+    top: -3px;
+  }
+
+  // texto dentro do botão
+  &__text {
+    color: $branco;
+    font-weight: $semi-bold;
+    font-size: rem(19);
+    transform: rotateZ(2deg);
+    text-transform: uppercase;
+
+    @include d(mobile) {
+      font-size: rem(16);
+    }
+  }
+}

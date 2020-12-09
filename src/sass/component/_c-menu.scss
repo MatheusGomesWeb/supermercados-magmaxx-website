@@ -1,0 +1,114 @@
+$componentName: 'c-menu';
+
+// menu
+.#{$componentName} {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $laranja;
+
+  // ul do menu - alinha os links na mesma linha
+  &__list {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: rem(20);
+
+    // alinha os links um embaixo do outro no mobile e tablet
+    @include d(mobile) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    @include d(tablet) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    // alinha os links em linha nas telas maiores
+    @include d(tablet-up) {
+      flex-direction: row;
+    }
+  }
+
+  // Nav links
+  &__item {
+    font-size: rem(19);
+    color: $branco;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    font-weight: $semi-bold;
+
+    // margem entre os links no mobile e tablet
+    @include d(mobile) {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      font-size: rem(16);
+    }
+
+    @include d(tablet) {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      //  margin: 0.5rem 0;
+      font-size: rem(16);
+    }
+
+    @include d(tablet-up) {
+      margin: 0;
+      font-size: rem(19);
+      flex-direction: row;
+      align-items: center;
+    }
+
+    // adiciona o separador entre os links
+    &:not(:nth-child(1))::before {
+      // remove os separadores no mobile e tablet e altera espaçamentos
+      @include d(mobile) {
+        content: '';
+        width: 80%;
+        height: 1px;
+        background: $branco;
+        display: block;
+        margin: 0.5rem 0;
+      }
+
+      @include d(tablet) {
+        content: '';
+        width: 80%;
+        height: 1px;
+        background: $branco;
+        display: block;
+        margin: 0.5rem 0;
+      }
+
+      @include d(tablet-up) {
+        content: '';
+        width: 1px;
+        height: rem(19);
+        background: $branco;
+        display: block;
+        margin: 0 1rem;
+      }
+
+      @include d(desktop) {
+        margin: 0 2rem;
+      }
+    }
+
+    // Cor dos links do menu
+    & a {
+      color: $branco;
+      text-decoration: none;
+      &:hover {
+        color: $verdeClaro;
+      }
+    }
+  }
+}
