@@ -1,0 +1,210 @@
+$layout: 'l-footer';
+
+.#{$layout} {
+  background: $laranja;
+  padding: rem(45) 0;
+  padding-bottom: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  overflow-x: hidden;   
+
+  &__container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+  @include d(mobile) {
+    flex-direction: column;
+  } 
+
+  @include d(tablet) {
+    justify-content: space-around;
+  }
+
+   @include d(desktop) {
+    justify-content: space-between;
+  }
+  }
+
+  // nossas-lojas
+  &__lojas {
+    color: $branco;
+  }
+
+  &__list {
+    margin-bottom: 1rem;
+
+    &:nth-child(2) {
+      margin-top: 1.5rem;
+    }
+
+    &__item {
+      list-style: none;
+      padding: 0.5rem 0;
+      text-align: center;
+
+      &--verde {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        background: $verde;
+        margin-bottom: 0.5rem;
+        border-radius: 4px;
+        text-transform: uppercase;
+        text-align: initial;
+      }
+    }
+  }
+
+  &__entregas {
+    position: relative;
+    &::before {
+      content: '';
+      display: block;
+    width: 1px;
+      height: 50%; 
+      background: $verdeClaro;
+      position: absolute;
+      top: 15%;
+      left: -5rem;
+
+      @include d(mobile) {
+        top: -1.5rem;
+        width: 80%;
+        height: 1px;
+        left: 10%;
+      }
+
+      @include d(tablet) {
+        left: -3rem;
+      }
+
+      @include d(desktop-up) {
+        left: -8rem;
+      }
+    }
+
+    &::after {
+      content: '';
+      display: block;
+     width: 1px;
+      height: 50%; 
+      background: $verdeClaro;
+      position: absolute;
+      top: 15%;
+      right: -5rem;
+
+      @include d(mobile) {
+        width: 80%;
+        height: 1px;
+        left: 10%;
+        top: 100%;
+      }
+
+      @include d(tablet) {
+        right: -3rem;
+      }
+
+       @include d(desktop-up) {
+        right: -8rem;
+      }
+    }
+
+    @include d(mobile) {
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      margin: 1rem auto;
+
+
+      & > p {
+        width: 50%;
+        line-height: calc(16px * 1.5);
+      }
+    }
+
+    &__social-list { 
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        color: $branco;
+        margin-bottom: 1rem;
+        img {
+          margin-right: 0.5rem;
+          width: 32px;
+          height: 32px;
+          cursor: pointer;
+
+          @include d(mobile) {
+            width: 22px;
+            height: 22px;
+          }
+        }
+      }
+
+      & a {
+        text-decoration: none;
+
+        &:hover {
+          opacity: 0.8;
+          transition: 0.3s;
+        }
+      }
+    }
+
+    &__img-caminhao {
+      width: 187px;
+      height: 93px;
+      margin-top: 0.5rem;
+      align-self: flex-end;
+    }
+  }
+
+  &__cartoes {
+
+    &__img {
+      margin-top: 1.5rem;
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  // Footer bottom
+  &__bottom {
+    background: $branco;
+    color: $preto;
+    font-size: rem(19);
+    font-weight: $regular;
+    padding: rem(45) 0;
+    margin-top: rem(45);
+    
+    &__container {
+      display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-transform: uppercase;
+    }
+
+    &__direitos strong {
+      font-weight: $medium;
+    }
+
+    &__autor {
+      font-weight: $medium;
+
+      img {
+        margin-left: .3rem;
+      }
+    }
+  }
+}

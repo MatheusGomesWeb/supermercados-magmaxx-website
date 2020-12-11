@@ -1,0 +1,11 @@
+$layout: 'l-banner';
+
+// Banner
+.#{$layout} {
+  width: 100%;
+
+  &__img {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}

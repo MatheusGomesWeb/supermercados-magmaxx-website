@@ -7,7 +7,7 @@ $componentName: 'c-menu';
   align-items: center;
   justify-content: center;
   background: $laranja;
-
+  
   // ul do menu - alinha os links na mesma linha
   &__list {
     width: 100%;
@@ -15,7 +15,7 @@ $componentName: 'c-menu';
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: rem(20);
+    padding: rem(20) 0;
 
     // alinha os links um embaixo do outro no mobile e tablet
     @include d(mobile) {
@@ -108,6 +108,7 @@ $componentName: 'c-menu';
       text-decoration: none;
       &:hover {
         color: $verdeClaro;
+        transition: .3s;
       }
     }
   }

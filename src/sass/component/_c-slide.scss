@@ -6,12 +6,13 @@ $componentName: 'c-slide';
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: red;
+  position: relative;
 
   // Imagens container
   &__imagens {
     display: flex;
     height: rem(428);
-    position: relative;
     overflow: hidden;
 
     // Tamanho das imagens nos diferentes tipos de tela
@@ -70,6 +71,8 @@ $componentName: 'c-slide';
 
       @include d(mobile) {
         margin: 0 0.2rem;
+        width: 18px;
+      height: 18px;
       }
 
       @include d(desktop-up) {
@@ -79,6 +82,7 @@ $componentName: 'c-slide';
 
       &:hover {
         background: $branco;
+        transition: .3s;
       }
     }
   }

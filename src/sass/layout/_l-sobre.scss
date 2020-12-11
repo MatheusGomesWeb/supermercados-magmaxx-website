@@ -1,0 +1,14 @@
+$layout: 'l-sobre';
+
+// Sobre
+.#{$layout} {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: rem(45) 0;
+
+  @include d(mobile) {
+    flex-direction: column;
+  }
+}

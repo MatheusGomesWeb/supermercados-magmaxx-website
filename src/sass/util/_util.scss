@@ -1,9 +1,18 @@
 // Limita e centraliza os elementos para ficar sempre centralizado no monitor e não grudar nos cantos da tela
 .u-container {
-  margin: 0 auto;
+
+ @include d(mobile) {
+   max-width: 90%;
+    margin: 0 0.5rem;
+  }
+
+  @include d(tablet) {
+    max-width: 720px;
+    margin: 0 1.5rem;
+  }
 
   @include d(tablet-up) {
-    max-width: $desktop-up + px;
+    max-width: $tablet-up + px;
   }
 
   @include d(desktop) {
@@ -13,4 +22,24 @@
   @include d(desktop-up) {
     max-width: $desktop-up + px;
   }
+}
+
+// Font weight
+.u-bold {
+  font-weight: $bold;
+}
+.u-semi-bold {
+  font-weight: $semi-bold;
+}
+.u-regular {
+  font-weight: $regular;
+}
+
+// texto
+.u-text-white {
+  color: $branco;
+}
+
+.u-text-uppercase {
+  text-transform: uppercase;
 }

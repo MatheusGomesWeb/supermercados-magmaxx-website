@@ -1,0 +1,47 @@
+$componentName: 'c-title';
+
+// Titulo com efeito virado
+.#{$componentName} {
+  position: relative;
+  max-width: 270px;
+  height: 44px;
+  //border-radius: rem(8);
+  background: none; 
+  border: 1px solid $laranja;
+  margin-bottom: rem(45);
+
+  // altera tamanho do botao no mobile
+  @include d(mobile) {
+    max-width: 250px;
+  }
+
+  // borda verde virada no botao
+  &__border {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;   
+    position: absolute;
+   // border-radius: rem(8);
+    background: none;
+    border: 1px solid $verde;
+    transform: rotateZ(-1.5deg);
+  }
+
+  // texto dentro do botão
+  &__text {
+    color: $preto;
+    font-weight: $bold;
+    font-size: rem(22);
+    transform: rotateZ(1.5deg);
+    text-transform: uppercase;
+
+    @include d(mobile) {
+      font-size: rem(16);
+    }
+  }
+}
+

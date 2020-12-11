@@ -5,90 +5,21 @@
 @import './util/reset';
 
 // Layout
-@import './layout/l-header.scss';
-@import './layout/l-main.scss';
+@import './layout/l-header';
+@import './layout/l-main';
+@import './layout/l-sobre';
+@import './layout/l-banner';
+@import './layout/l-ofertas';
+@import './layout/l-footer';
 
 // Components
 @import './component/c-button';
 @import './component/c-menu';
 @import './component/c-slide';
+@import './component/c-card';
+@import './component/c-title';
 
-#flex-wrapper main .slider img {
-  width: 100%;
-  /*height: 50vh;*/
-  height: auto;
-  background-size: cover;
-}
 
-#flex-wrapper main .card-wrapper {
-  display: -webkit-flex;
-  display: flex;
-  /*  @include align-items(center);
-   @include justify-content(center);   */
-  padding: 35px 0;
-}
-#flex-wrapper main .card-wrapper .card {
-  /* padding: 45px;*/
-}
-#flex-wrapper main .card-wrapper .card h1 {
-  font-weight: bold;
-  text-transform: uppercase;
-  /* font-size: 2.2em;*/
-  font-size: 22px;
-  padding-bottom: 15px;
-  padding: 0 4%;
-}
-#flex-wrapper main .card-wrapper .card p {
-  font-size: 15px;
-  padding: 0 4%;
-}
-#flex-wrapper main .card-wrapper .card p img.leia-mais {
-  margin: 15px 0;
-  float: right;
-}
-#flex-wrapper main .clube img {
-  width: 100%;
-  background-size: cover;
-  height: auto;
-}
-#flex-wrapper main .ofertas {
-  padding: 45px;
-  text-align: center;
-}
-
-#flex-wrapper main .ofertas .card img {
-  width: 100%;
-  height: auto;
-  background-size: cover;
-}
-
-#flex-wrapper main .ofertas .card-wrapper {
-  justify-content: center;
-}
-
-#flex-wrapper main .a-empresa-first {
-  margin-top: -100px;
-}
-
-#flex-wrapper main #empresa .card-wrapper {
-  padding: 0 40px;
-  margin: 0 auto;
-}
-#flex-wrapper main #empresa .card-wrapper .card {
-  float: left;
-  margin-right: 25px;
-  margin-left: 25px;
-}
-#flex-wrapper main #empresa .card-wrapper .card p {
-  padding: 35px 0;
-  display: inline-block;
-}
-#flex-wrapper main #empresa .card-wrapper .card h1 {
-  float: left;
-  margin: 0;
-  padding: 0;
-  display: block;
-}
 #flex-wrapper main #dicas {
   margin-bottom: 20vh;
 }
