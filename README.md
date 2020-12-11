@@ -1,7 +1,3 @@
-<p align="center">  
-<img src="./readme/preview.png" alt="Landing Page dos Supermercados Magmaxx para Cadastrar Cupom de Desconto"/>
-</p>
-
 <h1 align="center">
   <a href="https://matheusgomesweb.github.io/landing-page-supermercados-magmaxx-cupom-desconto">
     🔗 Website dos Supermercados Magmaxx
