@@ -1,5 +1,5 @@
 <h1 align="center">
-  <a href="https://matheusgomesweb.github.io/landing-page-supermercados-magmaxx-cupom-desconto">
+  <a href="https://matheusgomesweb.github.io/supermercados-magmaxx-website/">
     🔗 Website dos Supermercados Magmaxx
   </a> 
 </h1>
