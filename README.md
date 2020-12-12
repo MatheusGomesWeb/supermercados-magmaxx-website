@@ -1,9 +1,5 @@
-<p align="center">  
-<img src="./readme/preview.png" alt="Landing Page dos Supermercados Magmaxx para Cadastrar Cupom de Desconto"/>
-</p>
-
 <h1 align="center">
-  <a href="https://matheusgomesweb.github.io/landing-page-supermercados-magmaxx-cupom-desconto">
+  <a href="https://matheusgomesweb.github.io/supermercados-magmaxx-website/">
     🔗 Website dos Supermercados Magmaxx
   </a> 
 </h1>
@@ -13,75 +9,7 @@
 </p>
 
 <p align="center"><b>Em desenvolvimento</b> :heavy_check_mark:</p>
-  
-<p align="center">
- <a href="#computer-sobre">Sobre</a> •
- <a href="#hammer-tecnologias">Tecnologias</a> • 
- <a href="#wrench-otimizações">Otimizações</a> • 
- <a href="#plugins">Plugins</a> • 
- <a href="#rocket-performance">Performance</a> • 
- <a href="#w3c">W3C</a> • 
- <a href="#autor">Autor</a> • 
- <a href="#memo-licença">Licença</a>
-</p>
-
-### :computer: Sobre
-
-Website dos **Supermercados Magmaxx** responsivo e interativo
-
----
-
-### :hammer: Tecnologias
-
-- **FrontEnd**
-
-  - HTML5
-  - CSS3
-  - JAVASCRIPT
-  - SASS
-  - RESPONSIVO
-
-- **Ferramentas**
-
-  - Gulp
-  - Webpack
-
-- **API**
-  - [VIACEP](https://viacep.com.br/)
-
----
-
-### :wrench: Otimizações
-
-- Imagens minificadas
-- CSS minificado
-- Javascript minificado
-- Mobile First (Responsivo) 📱
-- Compativel com todos os browsers.
-- Compativel com todos os dispositivos.
-- Busca automatica de Endereço na API VIACEP
-- RegExp para validação dos campos do formulário
-- Modal dinâmico e interativo
-- Slide
-- Menu Mobile
-- Validação dos campos interativo
-- Botôes de Scroll animados
-
----
-
-### :rocket: Performance
-
-[<img src="https://www.gstatic.com/images/icons/material/product/2x/pagespeed_64dp.png" width="46px"/>](https://developers.google.com/speed/pagespeed/insights/?hl=pt-br&url=https%3A%2F%2Fmatheusgomesweb.github.io%2Flanding-page-supermercados-magmaxx-cupom-desconto%2F&tab=desktop)
-
-- **Desktop** - 92%
-- **Mobile** - 75%
-
----
-
-### W3C
-
-[<img style="border:0;width:46px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="CSS válido!" />](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fmatheusgomesweb.github.io%2Flanding-page-supermercados-magmaxx-cupom-desconto%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=pt-BR)
-
+ 
 ---
 
 ### Autor
