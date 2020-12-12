@@ -1,9 +1,9 @@
-$componentName: 'c-card';
+$componentName: "c-card";
 
-.#{$componentName} {   
- &:nth-child(2) {
-      padding: 0 1.5rem;
-    }
+.#{$componentName} {
+  &:nth-child(2) {
+    padding: 0 1.5rem;
+  }
 
   @include d(mobile) {
     &:nth-child(2) {
@@ -11,7 +11,7 @@ $componentName: 'c-card';
     }
   }
 
-// Titulo
+  // Titulo
   &__title {
     font-weight: bold;
     text-transform: uppercase;
@@ -19,13 +19,14 @@ $componentName: 'c-card';
     margin-bottom: rem(15);
   }
 
-// Descrição
+  // Descrição
   &__descricao {
     margin-bottom: rem(15);
     font-size: rem(15);
-  }  
+    line-height: rem(24);
+  }
 
-// Link com a borda preta
+  // Link com a borda preta
   &__link {
     width: 69px;
     height: 37px;
@@ -33,23 +34,23 @@ $componentName: 'c-card';
     border: 1px solid $laranja;
     transform: rotateZ(4deg);
     text-align: center;
-    font-size: rem(16);    
+    font-size: rem(16);
 
     &:hover {
       border-color: $verde;
     }
   }
 
-// Item clicavel (Texto)
+  // Item clicavel (Texto)
   &__link-item {
     transform: rotateZ(7deg);
   }
 
-// Borda verde
+  // Borda verde
   &__border {
-      border: 1px solid $verde;
-      transform: rotateZ(-11deg);
-    padding: .2rem;
+    border: 1px solid $verde;
+    transform: rotateZ(-11deg);
+    padding: 0.2rem;
 
     &:hover {
       border-color: $laranja;
@@ -57,15 +58,15 @@ $componentName: 'c-card';
   }
 
   & a {
-      text-decoration: none;
-      color: $laranja;
-      font-weight: $bold;      
+    text-decoration: none;
+    color: $laranja;
+    font-weight: $bold;
+    display: inline-block;
 
-      &:hover {
-        opacity: 0.9;
-    transition: .3s;
-    color: $verde;
-      }      
+    &:hover {
+      opacity: 0.9;
+      transition: 0.3s;
+      color: $verde;
     }
-
+  }
 }

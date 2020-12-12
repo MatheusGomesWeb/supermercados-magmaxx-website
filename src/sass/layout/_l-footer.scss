@@ -1,4 +1,4 @@
-$layout: 'l-footer';
+$layout: "l-footer";
 
 .#{$layout} {
   background: $laranja;
@@ -6,26 +6,22 @@ $layout: 'l-footer';
   padding-bottom: 0;
   display: flex;
   justify-content: center;
+  justify-content: center;
   flex-direction: column;
-  overflow-x: hidden;   
+  overflow-x: hidden;
 
   &__container {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-
-  @include d(mobile) {
-    flex-direction: column;
-  } 
-
-  @include d(tablet) {
     justify-content: space-around;
-  }
 
-   @include d(desktop) {
-    justify-content: space-between;
-  }
+    @include d(mobile) {
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
   }
 
   // nossas-lojas
@@ -63,10 +59,10 @@ $layout: 'l-footer';
   &__entregas {
     position: relative;
     &::before {
-      content: '';
+      content: "";
       display: block;
-    width: 1px;
-      height: 50%; 
+      width: 1px;
+      height: 50%;
       background: $verdeClaro;
       position: absolute;
       top: 15%;
@@ -83,16 +79,24 @@ $layout: 'l-footer';
         left: -3rem;
       }
 
+      @include d(tablet-up) {
+        left: -1rem;
+      }
+
+      @include d(desktop) {
+        left: -3rem;
+      }
+
       @include d(desktop-up) {
         left: -8rem;
       }
     }
 
     &::after {
-      content: '';
+      content: "";
       display: block;
-     width: 1px;
-      height: 50%; 
+      width: 1px;
+      height: 50%;
       background: $verdeClaro;
       position: absolute;
       top: 15%;
@@ -109,7 +113,15 @@ $layout: 'l-footer';
         right: -3rem;
       }
 
-       @include d(desktop-up) {
+      @include d(tablet-up) {
+        right: -1rem;
+      }
+
+      @include d(desktop) {
+        right: -3rem;
+      }
+
+      @include d(desktop-up) {
         right: -8rem;
       }
     }
@@ -124,14 +136,13 @@ $layout: 'l-footer';
       flex-direction: column;
       margin: 1rem auto;
 
-
       & > p {
         width: 50%;
         line-height: calc(16px * 1.5);
       }
     }
 
-    &__social-list { 
+    &__social-list {
       li {
         display: flex;
         align-items: center;
@@ -170,11 +181,14 @@ $layout: 'l-footer';
   }
 
   &__cartoes {
-
     &__img {
       margin-top: 1.5rem;
       img {
-        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        @include d(mobile) {
+          height: 100%;
+        }
       }
     }
   }
@@ -187,23 +201,40 @@ $layout: 'l-footer';
     font-weight: $regular;
     padding: rem(45) 0;
     margin-top: rem(45);
-    
+
     &__container {
       display: flex;
-    justify-content: space-around;
-    align-items: center;
-    text-transform: uppercase;
+      justify-content: space-between;
+      align-items: center;
+      text-transform: uppercase;
+
+      @include d(mobile) {
+        flex-direction: column;
+        font-size: rem(16);
+      }
+
+      @include d(desktop) {
+        justify-content: space-around;
+      }
     }
 
-    &__direitos strong {
-      font-weight: $medium;
+    &__direitos {
+      line-height: rem(24);
+
+      strong {
+        font-weight: $semi-bold;
+      }
     }
 
     &__autor {
       font-weight: $medium;
 
+      @include d(mobile) {
+        margin-top: 1rem;
+      }
+
       img {
-        margin-left: .3rem;
+        margin-left: 0.3rem;
       }
     }
   }

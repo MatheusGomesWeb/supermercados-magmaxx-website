@@ -1,4 +1,4 @@
-$componentName: 'c-title';
+$componentName: "c-title";
 
 // Titulo com efeito virado
 .#{$componentName} {
@@ -6,7 +6,7 @@ $componentName: 'c-title';
   max-width: 270px;
   height: 44px;
   //border-radius: rem(8);
-  background: none; 
+  background: none;
   border: 1px solid $laranja;
   margin-bottom: rem(45);
 
@@ -23,9 +23,9 @@ $componentName: 'c-title';
     left: 0;
     top: 0;
     right: 0;
-    bottom: 0;   
+    bottom: 0;
     position: absolute;
-   // border-radius: rem(8);
+    // border-radius: rem(8);
     background: none;
     border: 1px solid $verde;
     transform: rotateZ(-1.5deg);
@@ -44,4 +44,3 @@ $componentName: 'c-title';
     }
   }
 }
-

@@ -1,4 +1,4 @@
-$componentName: 'c-slide';
+$componentName: "c-slide";
 
 // Slide
 .#{$componentName} {
@@ -72,7 +72,7 @@ $componentName: 'c-slide';
       @include d(mobile) {
         margin: 0 0.2rem;
         width: 18px;
-      height: 18px;
+        height: 18px;
       }
 
       @include d(desktop-up) {
@@ -82,7 +82,7 @@ $componentName: 'c-slide';
 
       &:hover {
         background: $branco;
-        transition: .3s;
+        transition: 0.3s;
       }
     }
   }

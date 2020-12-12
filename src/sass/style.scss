@@ -1,24 +1,23 @@
 // Utils
-@import './util/variaveis';
-@import './util/mixins';
-@import './util/util';
-@import './util/reset';
+@import "./util/variaveis";
+@import "./util/mixins";
+@import "./util/util";
+@import "./util/reset";
 
 // Layout
-@import './layout/l-header';
-@import './layout/l-main';
-@import './layout/l-sobre';
-@import './layout/l-banner';
-@import './layout/l-ofertas';
-@import './layout/l-footer';
+@import "./layout/l-header";
+@import "./layout/l-main";
+@import "./layout/l-sobre";
+@import "./layout/l-banner";
+@import "./layout/l-ofertas";
+@import "./layout/l-footer";
 
 // Components
-@import './component/c-button';
-@import './component/c-menu';
-@import './component/c-slide';
-@import './component/c-card';
-@import './component/c-title';
-
+@import "./component/c-button";
+@import "./component/c-menu";
+@import "./component/c-slide";
+@import "./component/c-card";
+@import "./component/c-title";
 
 #flex-wrapper main #dicas {
   margin-bottom: 20vh;
@@ -66,7 +65,7 @@
   color: black;
   font-size: 1.3em;
 }
-#flex-wrapper main #contato .card-wrapper .card input[type='submit'] {
+#flex-wrapper main #contato .card-wrapper .card input[type="submit"] {
   background: #e2781c;
   color: white;
   width: 150px;

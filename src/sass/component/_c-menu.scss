@@ -1,4 +1,4 @@
-$componentName: 'c-menu';
+$componentName: "c-menu";
 
 // menu
 .#{$componentName} {
@@ -7,7 +7,7 @@ $componentName: 'c-menu';
   align-items: center;
   justify-content: center;
   background: $laranja;
-  
+
   // ul do menu - alinha os links na mesma linha
   &__list {
     width: 100%;
@@ -71,7 +71,7 @@ $componentName: 'c-menu';
     &:not(:nth-child(1))::before {
       // remove os separadores no mobile e tablet e altera espaçamentos
       @include d(mobile) {
-        content: '';
+        content: "";
         width: 80%;
         height: 1px;
         background: $branco;
@@ -80,7 +80,7 @@ $componentName: 'c-menu';
       }
 
       @include d(tablet) {
-        content: '';
+        content: "";
         width: 80%;
         height: 1px;
         background: $branco;
@@ -89,7 +89,7 @@ $componentName: 'c-menu';
       }
 
       @include d(tablet-up) {
-        content: '';
+        content: "";
         width: 1px;
         height: rem(19);
         background: $branco;
@@ -108,7 +108,7 @@ $componentName: 'c-menu';
       text-decoration: none;
       &:hover {
         color: $verdeClaro;
-        transition: .3s;
+        transition: 0.3s;
       }
     }
   }
