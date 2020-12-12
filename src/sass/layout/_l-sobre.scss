@@ -34,6 +34,8 @@ $layout: "l-sobre";
 
     // paragrafos
     p {
+      line-height: rem(30);
+
       &:not(:nth-child(1)) {
         margin-top: 1rem;
       }
@@ -66,15 +68,46 @@ $layout: "l-sobre";
   // sobre nós
   &__sobre-nos {
     padding-right: 3rem;
+    margin: 0 !important;
+
+    // paragrafos
+    p {
+      line-height: rem(30);
+
+      &:not(:nth-child(1)) {
+        margin-top: 1rem;
+      }
+    }
 
     @include d(mobile) {
       padding-right: 0;
+    }
+
+    // Imagem
+    &__image {
+      flex: 1;
+      img {
+        border-radius: 4px;
+        min-width: 100%;
+        max-width: 100%;
+        min-height: 96%;
+        max-height: 96%;
+      }
     }
   }
 
   // Missão
   &__missao {
     padding-right: 3rem;
+
+    // paragrafos
+    p {
+      line-height: rem(30);
+
+      &:not(:nth-child(1)) {
+        margin-top: 1rem;
+      }
+    }
 
     @include d(mobile) {
       padding-right: 0;
@@ -85,17 +118,5 @@ $layout: "l-sobre";
   &__title {
     width: 100%;
     margin-top: rem(35);
-  }
-
-  // Imagem
-  &__image {
-    flex: 1;
-    img {
-      border-radius: 4px;
-      min-width: 100%;
-      max-width: 100%;
-      min-height: 96%;
-      max-height: 96%;
-    }
   }
 }
