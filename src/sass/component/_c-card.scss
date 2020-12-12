@@ -1,29 +1,19 @@
 $componentName: "c-card";
 
 .#{$componentName} {
-  &:nth-child(2) {
-    padding: 0 1.5rem;
-  }
-
-  @include d(mobile) {
-    &:nth-child(2) {
-      padding: rem(45) 0;
-    }
-  }
-
   // Titulo
   &__title {
     font-weight: bold;
     text-transform: uppercase;
     font-size: rem(22);
-    margin-bottom: rem(15);
   }
 
   // Descrição
   &__descricao {
-    margin-bottom: rem(15);
-    font-size: rem(15);
+    font-size: rem(16);
     line-height: rem(24);
+
+    margin: rem(25) 0;
   }
 
   // Link com a borda preta
@@ -67,6 +57,21 @@ $componentName: "c-card";
       opacity: 0.9;
       transition: 0.3s;
       color: $verde;
+    }
+  }
+
+  // Modificadores
+  &--inline {
+    display: flex;
+
+    @include d(mobile) {
+      flex-direction: column;
+    }
+    @include d(tablet) {
+      flex-direction: column;
+    }
+    @include d(tablet-up) {
+      flex-direction: row;
     }
   }
 }

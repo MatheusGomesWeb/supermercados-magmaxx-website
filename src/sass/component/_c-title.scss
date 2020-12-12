@@ -3,12 +3,11 @@ $componentName: "c-title";
 // Titulo com efeito virado
 .#{$componentName} {
   position: relative;
-  max-width: 270px;
+  width: 270px;
   height: 44px;
-  //border-radius: rem(8);
   background: none;
   border: 1px solid $laranja;
-  margin-bottom: rem(45);
+  margin-bottom: rem(25);
 
   // altera tamanho do botao no mobile
   @include d(mobile) {
