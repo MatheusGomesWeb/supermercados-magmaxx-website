@@ -1,0 +1,31 @@
+$componentName: "c-cartao-etapas";
+
+.#{$componentName} {
+  width: 95%;
+  background-color: $verde;
+  color: $branco;
+  font-weight: $bold;
+  font-size: rem(22);
+  padding: rem(45);
+  border-radius: 4px rem(38) rem(38) 4px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  align-self: flex-end;
+
+  // numero
+  &::before {
+    content: "1";
+    font-size: rem(252);
+    font-weight: bold;
+    position: absolute;
+    color: $verde;
+    left: -5%;
+  }
+
+  // paragrafo
+  &__descricao {
+    text-transform: uppercase;
+    line-height: rem(30);
+  }
+}

@@ -1,0 +1,35 @@
+$componentName: "l-cartao";
+
+.#{$componentName} {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: rem(45) 0;
+
+  // inline
+  &__inline {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: rem(45) 0;
+  }
+
+  // como baixar
+  &__como-baixar {
+    font-size: rem(22);
+    strong {
+      display: block;
+      font-weight: $bold;
+    }
+  }
+
+  // dias para pagar
+  &__dias-pagar {
+    background-color: $verde;
+    padding: rem(15) rem(45);
+    font-size: rem(22);
+    font-weight: $bold;
+    color: $branco;
+    border-radius: 8px;
+  }
+}

@@ -7,11 +7,14 @@
 // Layout
 @import "./layout/l-header";
 @import "./layout/l-main";
-@import "./layout/l-sobre";
-@import "./layout/l-nossas-lojas";
 @import "./layout/l-banner";
 @import "./layout/l-ofertas";
 @import "./layout/l-footer";
+
+// Paginas
+@import "./layout/l-sobre";
+@import "./layout/l-nossas-lojas";
+@import "./layout/l-cartao";
 
 // Components
 @import "./component/c-button";
@@ -20,155 +23,4 @@
 @import "./component/c-card";
 @import "./component/c-title";
 @import "./component/c-lojas";
-
-#flex-wrapper main #dicas {
-  margin-bottom: 20vh;
-}
-#flex-wrapper main #dicas .card-wrapper {
-  padding: 0 45px;
-}
-#flex-wrapper main #dicas .card-wrapper .card {
-  padding: 25px 15px;
-}
-#flex-wrapper main #dicas .card-wrapper .card .leia-mais {
-  float: right;
-  margin-right: 60px;
-}
-#flex-wrapper main #dicas .card-wrapper .card .card-img {
-  float: left;
-  padding: 0 25px;
-}
-#flex-wrapper main #dicas .card-wrapper .card .card-img img {
-  width: 100%;
-  display: block;
-}
-#flex-wrapper main #contato {
-  margin-bottom: 5vh;
-  width: 100%;
-}
-#flex-wrapper main #contato .card-wrapper {
-  padding: 0 45px;
-  width: auto;
-}
-#flex-wrapper main #contato .card-wrapper .card {
-  width: 100%;
-  padding: 10px 15px;
-}
-
-#flex-wrapper main #contato .card-wrapper .card input,
-#flex-wrapper main #contato .card-wrapper .card textarea {
-  width: 100%;
-  background: #dedddd;
-  border: none;
-  padding: 15px;
-}
-#flex-wrapper main #contato .card-wrapper .card input::placeholder,
-#flex-wrapper main #contato .card-wrapper .card textarea::placeholder {
-  color: black;
-  font-size: 1.3em;
-}
-#flex-wrapper main #contato .card-wrapper .card input[type="submit"] {
-  background: #e2781c;
-  color: white;
-  width: 150px;
-  float: right;
-  margin: 25px 0;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  font-size: 1.2em;
-}
-#flex-wrapper main #cartao {
-  margin-bottom: 15vh;
-}
-#flex-wrapper main #cartao .card-wrapper.comobaixar {
-  -webkit-justify-content: space-around;
-  justify-content: space-around;
-}
-#flex-wrapper main #cartao .card-wrapper.step {
-  margin: -80px 0;
-  margin-bottom: 100px;
-}
-#flex-wrapper main #cartao .card-wrapper.step img {
-  width: 80vw;
-  /* height: 25vh;*/
-  height: auto;
-}
-#flex-wrapper main #cartao .card-wrapper {
-  -webkit-justify-content: center;
-  justify-content: center;
-  padding: 0;
-}
-#flex-wrapper main #cartao .card-wrapper .card h1 {
-  font-size: 1.5em;
-  font-weight: normal;
-}
-#flex-wrapper main #cartao .card-wrapper .card h1 strong {
-  font-weight: bold;
-}
-#flex-wrapper footer {
-  background: #e2781c;
-  position: relative;
-  bottom: 0;
-  color: white;
-  text-align: center;
-  width: 100%;
-}
-#flex-wrapper footer .card-wrapper {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: start;
-  align-items: start;
-  -webkit-justify-content: space-around;
-  justify-content: space-around;
-  padding: 35px 0;
-}
-#flex-wrapper footer .card-wrapper .card {
-  padding: 25px 45px;
-}
-#flex-wrapper footer .card-wrapper .card a {
-  color: white;
-  text-decoration: none;
-}
-#flex-wrapper footer .card-wrapper .card h1 {
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 1.4em;
-  padding-bottom: 15px;
-}
-#flex-wrapper footer .card-wrapper .card p {
-  font-size: 1.2em;
-}
-#flex-wrapper footer .card-wrapper .card p img.leia-mais {
-  margin: 15px 0;
-}
-#flex-wrapper footer .card-wrapper .card p strong {
-  font-weight: bold;
-}
-#flex-wrapper footer .card-wrapper .card ul li {
-  padding: 5px 0;
-}
-#flex-wrapper footer .card-wrapper .card ul li.li-active {
-  background: #5ca151;
-  text-transform: uppercase;
-  font-weight: bold;
-  padding: 2px 10px;
-  text-align: left;
-}
-#flex-wrapper footer .card-wrapper .card ul span {
-  float: right;
-}
-#flex-wrapper footer .card-wrapper .card .entregas-car {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-#flex-wrapper footer .card-wrapper .card .entregas-car div img {
-  width: 170px;
-}
-#flex-wrapper footer .footer-bottom {
-  background: white;
-  color: black;
-  text-transform: uppercase;
-}
+@import "./component/c-cartao-etapas";
