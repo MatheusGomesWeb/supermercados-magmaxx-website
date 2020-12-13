@@ -8,6 +8,7 @@
 @import "./layout/l-header";
 @import "./layout/l-main";
 @import "./layout/l-sobre";
+@import "./layout/l-nossas-lojas";
 @import "./layout/l-banner";
 @import "./layout/l-ofertas";
 @import "./layout/l-footer";
@@ -18,6 +19,7 @@
 @import "./component/c-slide";
 @import "./component/c-card";
 @import "./component/c-title";
+@import "./component/c-lojas";
 
 #flex-wrapper main #dicas {
   margin-bottom: 20vh;

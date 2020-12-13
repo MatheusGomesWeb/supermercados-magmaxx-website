@@ -1,0 +1,46 @@
+$componentName: "c-lojas";
+
+// Mapa com o endereço das lojas
+.#{$componentName} {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: url("../img/end/map1.jpg") no-repeat;
+  background-position: center top;
+  background-size: cover;
+  padding: rem(45);
+  color: $branco;
+  font-size: rem(22);
+  font-weight: $medium;
+  border-radius: 4px;
+
+  @include d(mobile) {
+    padding-left: rem(22);
+    font-size: rem(19);
+  }
+
+  // list
+
+  &__list {
+    list-style: none;
+  }
+
+  &__list-item {
+    &:not(:nth-child(1)) {
+      margin-top: 1.5rem;
+    }
+  }
+
+  // modificador
+
+  // mapa laranja
+  &--bg-laranja {
+    background: url("../img/end/map2.jpg") no-repeat;
+    background-position: center right;
+    background-size: cover;
+    justify-content: flex-end;
+    text-align: right;
+    margin: rem(45) 0;
+  }
+}
