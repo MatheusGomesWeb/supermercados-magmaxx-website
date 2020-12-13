@@ -82,17 +82,29 @@ $layout: "l-sobre";
     @include d(mobile) {
       padding-right: 0;
     }
+  }
 
-    // Imagem
-    &__image {
-      flex: 1;
-      img {
-        border-radius: 4px;
-        min-width: 100%;
-        max-width: 100%;
-        min-height: 96%;
-        max-height: 96%;
-      }
+  // Imagem sobre nos
+  &__image {
+    border-radius: 4px;
+    min-width: 100%;
+    min-height: 50%;
+
+    @include d(mobile) {
+      max-width: 100%;
+    }
+
+    @include d(tablet) {
+      max-width: 100%;
+    }
+
+    @include d(tablet-up) {
+      min-width: 450px;
+      max-width: 450px;
+    }
+
+    @include d(desktop-up) {
+      min-height: 96%;
     }
   }
 
