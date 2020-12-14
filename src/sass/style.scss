@@ -12,11 +12,11 @@
 @import "./layout/l-footer";
 
 // Paginas
-@import "./layout/l-sobre";
-@import "./layout/l-nossas-lojas";
-@import "./layout/l-cartao";
-@import "./layout/l-dicas";
-@import "./layout/l-contato";
+@import "./layout/pages/l-sobre";
+@import "./layout/pages/l-nossas-lojas";
+@import "./layout/pages/l-cartao";
+@import "./layout/pages/l-dicas";
+@import "./layout/pages/l-contato";
 
 // Components
 @import "./component/c-button";
