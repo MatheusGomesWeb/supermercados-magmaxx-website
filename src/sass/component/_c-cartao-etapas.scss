@@ -1,31 +1,93 @@
 $componentName: "c-cartao-etapas";
 
+// etapas pagina cartao
 .#{$componentName} {
-  width: 95%;
+  width: 100%;
   background-color: $verde;
   color: $branco;
   font-weight: $bold;
   font-size: rem(22);
   padding: rem(45);
-  border-radius: 4px rem(38) rem(38) 4px;
+  border-radius: rem(38);
   display: flex;
   align-items: center;
-  position: relative;
+  justify-content: space-between;
   align-self: flex-end;
 
+  &:not(:nth-last-child(1)) {
+    margin-bottom: rem(45);
+  }
+
+  @include d(mobile) {
+    padding: rem(25) rem(45);
+    flex-direction: column;
+    align-self: flex-start;
+    align-items: center;
+    justify-content: center;
+  }
+
   // numero
-  &::before {
-    content: "1";
-    font-size: rem(252);
+  &__numero {
+    font-size: rem(152);
     font-weight: bold;
-    position: absolute;
-    color: $verde;
-    left: -5%;
+    color: $branco;
+    margin-right: rem(45);
   }
 
   // paragrafo
   &__descricao {
     text-transform: uppercase;
     line-height: rem(30);
+    flex: 2;
+    font-size: rem(16);
+  }
+
+  // loja de aplicativos
+  &__aplicativos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 2;
+    text-align: center;
+
+    @include d(mobile) {
+      margin: rem(45) 0;
+    }
+
+    @include d(desktop-up) {
+      flex: 5;
+    }
+
+    span {
+      background-color: $preto;
+      padding: rem(15);
+      border-radius: rem(28);
+      &:not(:nth-child(1)) {
+        margin-top: 1.5rem;
+      }
+    }
+  }
+
+  // qr code
+  &__qr-code {
+    background-color: $verde;
+    width: 100%;
+    flex: 2;
+    padding: rem(15);
+    border-radius: rem(18);
+  }
+
+  // modificadores
+  &--reverse {
+    flex-direction: row-reverse;
+
+    @include d(mobile) {
+      flex-direction: column;
+    }
+  }
+
+  &--numero-reverse {
+    color: $laranja;
   }
 }
