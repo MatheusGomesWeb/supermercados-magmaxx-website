@@ -48,6 +48,7 @@ $componentName: "l-contato";
       width: 140px;
       float: right;
       transition: 0.3s;
+      border: 1px solid $laranja;
 
       @include d(mobile) {
         width: 100px;
