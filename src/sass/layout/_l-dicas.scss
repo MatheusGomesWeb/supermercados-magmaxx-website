@@ -1,0 +1,71 @@
+$componentName: "l-dicas";
+
+.#{$componentName} {
+  width: 100%;
+  padding: rem(45) 0;
+  display: flex;
+  flex-wrap: wrap;
+
+  // prato
+  &__prato {
+    flex: 1;
+    padding-right: rem(40);
+
+    &:nth-last-child(1) {
+      margin-bottom: 0;
+    }
+
+    @include d(mobile) {
+      margin-bottom: rem(35) !important;
+    }
+
+    @include d(tablet) {
+      margin-bottom: rem(35) !important;
+    }
+  }
+  // paragrafo
+  &__descricao {
+    line-height: rem(30);
+    margin-bottom: rem(45);
+
+    @include d(mobile) {
+      margin-bottom: rem(25);
+    }
+  }
+
+  // nome do prato
+  &__nome-prato {
+    margin-left: 2rem;
+
+    @include d(mobile) {
+      margin-left: 0;
+      margin-top: 1.5rem;
+    }
+    @include d(tablet) {
+      margin-left: 0;
+      margin-top: 1.5rem;
+    }
+
+    @include d(tablet-up) {
+      margin-left: 2rem;
+    }
+
+    @include d(desktop) {
+      margin-top: 0;
+    }
+  }
+
+  // imagem do prato
+  &__image {
+    width: 100%;
+    flex: 1;
+    img {
+      border-radius: 8px;
+      min-width: 100%;
+
+      @include d(mobile) {
+        max-width: 100%;
+      }
+    }
+  }
+}
