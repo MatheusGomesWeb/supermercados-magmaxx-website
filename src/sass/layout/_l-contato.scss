@@ -1,0 +1,89 @@
+$componentName: "l-contato";
+
+.#{$componentName} {
+  width: 100%;
+  padding: rem(45) 0;
+
+  // formulario
+
+  &__formulario {
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      background-color: #dedddd;
+      border: none;
+      outline: 0;
+      color: $preto;
+      width: 100%;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      font-size: rem(16);
+      border: 1px solid #dedddd;
+      border-radius: 4px;
+      transition: 0.3s;
+
+      &::placeholder {
+        color: #6a6a6a;
+        font-weight: $medium;
+        font-size: rem(16);
+      }
+
+      &:focus {
+        border: 1px solid $laranja;
+      }
+    }
+
+    textarea {
+      border-radius: 4px 4px 0 0;
+    }
+
+    // submit
+    input[type="submit"] {
+      color: $branco;
+      background-color: $laranja;
+      border-radius: 8px;
+      padding: 1rem;
+      border: none;
+      font-size: rem(19);
+      width: 140px;
+      float: right;
+      transition: 0.3s;
+
+      @include d(mobile) {
+        width: 100px;
+        padding: 0.8rem 0.5rem;
+      }
+
+      &:hover {
+        background-color: $branco;
+        border: 1px solid $laranja;
+        color: $laranja;
+      }
+    }
+
+    // modificadores
+    &--inline {
+      display: flex;
+      justify-content: space-between;
+
+      @include d(mobile) {
+        flex-direction: column;
+      }
+
+      // input inline
+      input[type="text"],
+      input[type="email"] {
+        width: 50%;
+
+        @include d(mobile) {
+          width: 100%;
+          margin-right: 0;
+        }
+      }
+
+      input[type="email"] {
+        margin-right: 1rem;
+      }
+    }
+  }
+}
