@@ -7,6 +7,8 @@ $componentName: "c-menu";
   align-items: center;
   justify-content: center;
   background: $laranja;
+  position: relative;
+  flex-wrap: wrap;
 
   // ul do menu - alinha os links na mesma linha
   &__list {
@@ -21,6 +23,7 @@ $componentName: "c-menu";
     @include d(mobile) {
       flex-direction: column;
       align-items: flex-start;
+      display: none;
     }
 
     @include d(tablet) {
@@ -31,6 +34,17 @@ $componentName: "c-menu";
     // alinha os links em linha nas telas maiores
     @include d(tablet-up) {
       flex-direction: row;
+    }
+
+    // menu mobile list
+    @include d(mobile) {
+      &[data-menu-list="close"] {
+        opacity: 0;
+      }
+      &[data-menu-list="open"] {
+        animation: animeLeft 0.3s forwards;
+        display: flex;
+      }
     }
   }
 
@@ -110,6 +124,91 @@ $componentName: "c-menu";
         color: $verdeClaro;
         transition: 0.3s;
       }
+    }
+  }
+
+  // menu mobile
+  @include d(mobile) {
+    // menu mobile container
+    &__mobile {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: $verdeClaro;
+      padding-right: rem(20);
+    }
+
+    // botao
+    &__mobile-button {
+      width: 45px;
+      height: 45px;
+      border: none;
+      color: $branco;
+      border-radius: 4px 4px 0 0;
+      cursor: pointer;
+      background-color: $verde;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      // trez traços
+      &::before {
+        content: "";
+        width: 58%;
+        height: 4px;
+        background-color: $laranja;
+        border-radius: 4px;
+        transition: 0.3s;
+        box-shadow: 0 8px $laranja, 0 -8px $laranja;
+      }
+
+      // data-menu mobile aberto
+      &[data-menu="open"] {
+        background-color: $laranja;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        transition: 0.3s;
+        border: none;
+
+        // X
+        &::before {
+          content: "";
+          width: 4px;
+          height: 68%;
+          transform: rotateZ(45deg);
+          background-color: #fff;
+          transition: 0.3s;
+          box-shadow: none;
+        }
+
+        // X
+        &::after {
+          content: "";
+          width: 4px;
+          height: 68%;
+          transform: rotateZ(-45deg);
+          background-color: #fff;
+          transition: 0.3s;
+        }
+      }
+    }
+
+    // titulo do menu mobile
+    &__mobile-title {
+      font-weight: bold;
+      font-size: rem(19);
+      color: $branco;
+      align-self: center;
+    }
+  }
+
+  // esconde menu mobile em outras telas
+  @include d(tablet) {
+    &__mobile {
+      display: none;
     }
   }
 }

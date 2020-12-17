@@ -1,3 +1,5 @@
-import test from './script/test';
+import MobileMenu from "./script/MobileMenu";
 
-test();
+// Menu Mobile
+const mobileMenu = new MobileMenu("[data-menu]", "[data-menu-list]");
+mobileMenu.init();

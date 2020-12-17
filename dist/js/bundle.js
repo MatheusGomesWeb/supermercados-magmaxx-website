@@ -16,17 +16,17 @@
   \*************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _script_test__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./script/test */ \"./src/js/script/test.js\");\n\n\n(0,_script_test__WEBPACK_IMPORTED_MODULE_0__.default)();\n\n\n//# sourceURL=webpack://minhas-taferas-automatizadas-front-end/./src/js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _script_MobileMenu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./script/MobileMenu */ \"./src/js/script/MobileMenu.js\");\n\n\n// Menu Mobile\nconst mobileMenu = new _script_MobileMenu__WEBPACK_IMPORTED_MODULE_0__.default(\"[data-menu]\", \"[data-menu-list]\");\nmobileMenu.init();\n\n\n//# sourceURL=webpack://minhas-taferas-automatizadas-front-end/./src/js/index.js?");
 
 /***/ }),
 
-/***/ "./src/js/script/test.js":
-/*!*******************************!*
-  !*** ./src/js/script/test.js ***!
-  \*******************************/
+/***/ "./src/js/script/MobileMenu.js":
+/*!*************************************!*
+  !*** ./src/js/script/MobileMenu.js ***!
+  \*************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": function() { return /* binding */ test; }\n/* harmony export */ });\nfunction test() {\n  console.log('test');\n}\n\n\n//# sourceURL=webpack://minhas-taferas-automatizadas-front-end/./src/js/script/test.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": function() { return /* binding */ MobileMenu; }\n/* harmony export */ });\nclass MobileMenu {\n  constructor(button, list) {\n    this.button = document.querySelector(button);\n    this.list = document.querySelector(list);\n\n    // bind\n    this.openMenu = this.openMenu.bind(this);\n    this.closeMenu = this.closeMenu.bind(this);\n    this.outsideClick = this.outsideClick.bind(this);\n    this.removeEvents = this.removeEvents.bind(this);\n  }\n\n  // Fechar o menu se estiver aberto\n  closeMenu() {\n    this.button.dataset.menu = \"close\";\n    this.list.dataset.menuList = \"close\";\n\n    this.removeEvents();\n\n    this.addEvents();\n  }\n\n  // Clicar fora e fechar\n  outsideClick({ target }) {\n    if (\n      this.button.dataset.menu === \"open\" &&\n      !target.hasAttribute(\"data-menu-list\") &&\n      !target.hasAttribute(\"data-menu\")\n    ) {\n      this.closeMenu();\n    }\n  }\n\n  // Abre o menu ao clicar no botao\n  openMenu() {\n    this.button.dataset.menu = \"open\";\n    this.list.dataset.menuList = \"open\";\n\n    // adiciona evento de fechar menu ao abrir\n    this.button.addEventListener(\"click\", this.closeMenu);\n\n    // adiciona evento clicar fora e fechar ao body\n    document.body.addEventListener(\"click\", this.outsideClick);\n  }\n\n  // remove eventos\n  removeEvents() {\n    this.button.removeEventListener(\"click\", this.openMenu);\n    this.button.removeEventListener(\"click\", this.closeMenu);\n    document.body.removeEventListener(\"click\", this.outsideClick);\n  }\n\n  // adiciona evento de click no botao\n  addEvents() {\n    this.button.addEventListener(\"click\", this.openMenu);\n  }\n\n  // inicia a classe\n  init() {\n    if (this.button && this.list) {\n      this.addEvents();\n    }\n  }\n}\n\n\n//# sourceURL=webpack://minhas-taferas-automatizadas-front-end/./src/js/script/MobileMenu.js?");
 
 /***/ })
 
