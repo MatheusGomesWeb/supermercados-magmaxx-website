@@ -1,4 +1,5 @@
 import MobileMenu from "./script/MobileMenu";
+import Modal from "./script/Modal";
 import Slide from "./script/Slide";
 
 // Menu Mobile
@@ -14,3 +15,13 @@ const slide = new Slide(
   ".c-slide__arrow-prev"
 );
 slide.init();
+
+// Modal
+const modal = new Modal(
+  ".c-modal",
+  ".c-modal__body",
+  ".c-modal__title",
+  ".c-modal__close"
+);
+
+modal.init();
