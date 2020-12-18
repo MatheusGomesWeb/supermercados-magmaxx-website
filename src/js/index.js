@@ -1,3 +1,4 @@
+import Form from "./script/Form";
 import MobileMenu from "./script/MobileMenu";
 import Modal from "./script/Modal";
 import Slide from "./script/Slide";
@@ -25,3 +26,7 @@ const modal = new Modal(
 );
 
 modal.init();
+
+// Formulario
+const contato = new Form();
+contato.init();

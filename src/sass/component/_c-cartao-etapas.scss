@@ -7,7 +7,7 @@ $componentName: "c-cartao-etapas";
   color: $branco;
   font-weight: $bold;
   font-size: rem(22);
-  padding: rem(45);
+  padding: rem(25) rem(45);
   border-radius: rem(38);
   display: flex;
   align-items: center;
@@ -31,7 +31,16 @@ $componentName: "c-cartao-etapas";
     font-size: rem(152);
     font-weight: bold;
     color: $branco;
+    margin-left: rem(45);
     margin-right: rem(45);
+
+    @include d(tablet) {
+      margin-left: 0;
+    }
+
+    @include d(desktop) {
+      margin-left: rem(45);
+    }
   }
 
   // paragrafo
@@ -60,11 +69,22 @@ $componentName: "c-cartao-etapas";
     }
 
     span {
+      width: 200px;
       background-color: $preto;
       padding: rem(15);
       border-radius: rem(28);
+      font-size: rem(19);
+      border: 1px solid $preto;
+      cursor: pointer;
+
       &:not(:nth-child(1)) {
         margin-top: 1.5rem;
+      }
+
+      &:hover {
+        transition: 0.3s;
+        background: $laranja;
+        border: 1px solid $verdeClaro;
       }
     }
   }
@@ -72,10 +92,14 @@ $componentName: "c-cartao-etapas";
   // qr code
   &__qr-code {
     background-color: $verde;
-    width: 100%;
+    text-align: center;
     flex: 2;
-    padding: rem(15);
-    border-radius: rem(18);
+
+    img {
+      width: 200px;
+      max-height: 200px;
+      border-radius: rem(18);
+    }
   }
 
   // modificadores

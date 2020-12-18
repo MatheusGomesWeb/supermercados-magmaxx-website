@@ -99,7 +99,7 @@
 
         <!--formulario de contato-->
         <div class="l-contato__formulario">
-          <form>
+          <form name="contato">
             <input
               type="text"
               name="nome"
@@ -138,7 +138,7 @@
               placeholder="Mensagem"
             ></textarea>
 
-            <input type="submit" value="Enviar" />
+            <input type="submit" value="Enviar" name="enviar" />
           </form>
         </div>
         <!--formulario de contato-->
@@ -264,6 +264,22 @@
       <!--footer bottom-->
     </footer>
     <!--footer-->
+
+    <!--modal-->
+    <div class="c-modal" data-modal="closed">
+      <div class="c-modal__container">
+        <div class="c-modal__close">X</div>
+        <div class="c-modal__body"></div>
+        <div class="c-modal__title">TITULO MODAL</div>
+      </div>
+    </div>
+    <!--modal-->
+
+    <!--message-->
+    <div class="c-message" data-message="closed">
+      <div class="c-message__text">ERRO PREENCHA O CAMPO TAL</div>
+    </div>
+    <!--message-->
 
     <!-- JS -->
     <script src="./dist/js/bundle.js"></script>
