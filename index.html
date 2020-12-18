@@ -162,8 +162,16 @@
 
         <!--l-ofertas__img-->
         <div class="l-ofertas__img">
-          <img src="./dist/img/ofertas/of1.jpg" alt="oferta" />
-          <img src="./dist/img/ofertas/of2.jpg" alt="oferta" />
+          <img
+            src="./dist/img/ofertas/of1.jpg"
+            alt="Promoção 1"
+            data-modal="image"
+          />
+          <img
+            src="./dist/img/ofertas/of2.jpg"
+            alt="Oferta 2"
+            data-modal="image"
+          />
         </div>
         <!--l-ofertas__img-->
       </section>
@@ -288,6 +296,16 @@
       <!--footer bottom-->
     </footer>
     <!--footer-->
+
+    <!--modal-->
+    <div class="c-modal" data-modal="closed">
+      <div class="c-modal__container">
+        <div class="c-modal__close">X</div>
+        <div class="c-modal__body"></div>
+        <div class="c-modal__title">TITULO MODAL</div>
+      </div>
+    </div>
+    <!--modal-->
 
     <!-- JS -->
     <script src="./dist/js/bundle.js"></script>
