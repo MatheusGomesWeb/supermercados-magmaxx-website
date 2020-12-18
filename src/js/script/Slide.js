@@ -1,8 +1,17 @@
 export default class Slide {
-  constructor(wrapper, imagens, bullets) {
+  constructor(wrapper, imagens, bullets, next, prev) {
+    // slide wrapper
     this.wrapper = document.querySelector(wrapper);
-    this.imagens = document.querySelectorAll(imagens);
+
+    // images
+    this.imagens = this.wrapper.querySelectorAll(imagens);
+
+    // bullets
     this.bullets = this.wrapper.querySelectorAll(bullets);
+
+    // arrows
+    this.next = this.wrapper.querySelector(next);
+    this.prev = this.wrapper.querySelector(prev);
 
     // bind
     this.slideBullets = this.slideBullets.bind(this);
@@ -49,7 +58,7 @@ export default class Slide {
     this.slideCount = 0;
 
     // quantidade de imagens
-    let slideSize = this.imagens.length;
+    this.slideSize = this.imagens.length;
 
     // Inicia a transição das imagens a cada 5 segundos
     this.slideInterval = setInterval(() => {
@@ -63,7 +72,7 @@ export default class Slide {
       this.slideCount += 1;
 
       // se o index for do tamanho do slide, reinicia o index para 0 (cria um loop infinito)
-      if (this.slideCount === slideSize) {
+      if (this.slideCount === this.slideSize) {
         this.slideCount = 0;
       }
     }, 5000);

@@ -9,6 +9,8 @@ mobileMenu.init();
 const slide = new Slide(
   ".c-slide",
   ".c-slide__imagens img",
-  ".c-slide__bullets-item"
+  ".c-slide__bullets-item",
+  ".c-slide__arrow-next",
+  ".c-slide__arrow-prev"
 );
 slide.init();

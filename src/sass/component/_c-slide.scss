@@ -103,4 +103,18 @@ $componentName: "c-slide";
       background-color: $branco;
     }
   }
+
+  // arrows
+  &__arrow {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
