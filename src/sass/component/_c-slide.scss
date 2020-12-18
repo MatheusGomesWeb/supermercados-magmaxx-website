@@ -97,5 +97,10 @@ $componentName: "c-slide";
         transition: 0.3s;
       }
     }
+
+    // javascript
+    & [data-bullets="active"] {
+      background-color: $branco;
+    }
   }
 }
