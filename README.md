@@ -27,7 +27,7 @@
 
 ### :computer: Sobre
 
-Website dos <strong>Supermercados Magmaxx</strong> mostrando os produtos da empresa, história, dicas e formulario de contato. <br> Todo o site foi construido com interatividade e com efeitos visuais agradáveis.
+**Supermercados Magmaxx** é uma empresa rede de Supermercados Varejista, suas lojas estão localizadas na cidade de **Pariquera-Açu** e **IGUAPE** e possui um Centro de Distribuição, em uma grande área, planejada, com excelente localização, onde os departamentos administrativos e de logística da empresa estão centralizados, gerenciando toda a Rede de Supermercados Magmaxx. 
 
 ---
 
