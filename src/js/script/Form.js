@@ -34,8 +34,9 @@ export default class Form {
 
     // Cria a mascada de acordo com a quantidade de digitos
 
+    this.telMask = "";
+
     if (filtro.length >= 8) {
-      this.telMask = "";
       // sem 9 na frente
       if (filtro.length === 8) {
         // 0000-0000
@@ -85,14 +86,14 @@ export default class Form {
       }
     }
 
-    // adiciona numero com mascara no input
-    this.form.telefone.value ? this.telMask : (this.form.telefone.value = "");
-
     // valida telefone
     this.telefone = validateForm(this.form.telefone.value, "telefone");
 
     // mostra as mensagens de erro
     this.errorMessage(this.form.telefone, this.telefone);
+
+    // adiciona numero com mascara no input
+    this.form.telefone.value = this.telMask;
   }
 
   // valida assunto
