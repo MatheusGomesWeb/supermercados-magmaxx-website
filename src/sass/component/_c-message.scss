@@ -12,22 +12,12 @@ $componentName: "c-message";
   left: 0;
   z-index: -9999;
   transition: 0.3s;
-  border: 2px solid $laranja;
   opacity: 0;
 
   // message
   &__text {
     color: $branco;
-    font-weight: bold;
-  }
-
-  @keyframes identifier {
-    from {
-      opacity: 1;
-    }
-    to {
-      opacity: 0;
-    }
+    font-weight: $semi-bold;
   }
 
   // saida
@@ -41,6 +31,7 @@ $componentName: "c-message";
     background: #e54;
     animation: messageIn 0.3s forwards;
     z-index: 9999;
+    border-bottom: 1px solid $laranja;
   }
 
   // success
@@ -48,5 +39,6 @@ $componentName: "c-message";
     background: $verde;
     animation: messageIn 0.3s forwards;
     z-index: 9999;
+    border-bottom: 1px solid $laranja;
   }
 }

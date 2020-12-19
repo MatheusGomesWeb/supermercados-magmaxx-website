@@ -1,6 +1,7 @@
 import Form from "./script/Form";
 import MobileMenu from "./script/MobileMenu";
 import Modal from "./script/Modal";
+import Scroll from "./script/Scroll";
 import Slide from "./script/Slide";
 
 // Menu Mobile
@@ -30,3 +31,7 @@ modal.init();
 // Formulario
 const contato = new Form();
 contato.init();
+
+// Scroll top
+const scrollTop = new Scroll(".c-btn-scrollTop");
+scrollTop.init();

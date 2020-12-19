@@ -207,6 +207,7 @@ $layout: "l-footer";
       justify-content: space-between;
       align-items: center;
       text-transform: uppercase;
+      margin: 0 auto;
 
       @include d(mobile) {
         flex-direction: column;

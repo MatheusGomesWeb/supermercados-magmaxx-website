@@ -16,6 +16,7 @@ export default class Form {
 
   // valida nome
   nome() {
+    // mostra as mensagens de erro
     this.errorMessage(this.form.nome, this.form.nome.value);
   }
 
@@ -27,17 +28,82 @@ export default class Form {
 
   // valida telefone
   telefone() {
+    // Mascara Telefone
+
+    const filtro = this.form.telefone.value.replace(/[^\d]/g, "");
+
+    // Cria a mascada de acordo com a quantidade de digitos
+
+    if (filtro.length >= 8) {
+      this.telMask = "";
+      // sem 9 na frente
+      if (filtro.length === 8) {
+        // 0000-0000
+        this.telMask = filtro.slice(0, 4) + "-" + filtro.slice(4, 8);
+      }
+
+      // com 9 na frente
+      else if (filtro.length === 9) {
+        // 0 0000-0000
+        this.telMask = filtro.slice(0, 5) + "-" + filtro.slice(5, 9);
+      }
+
+      // fixo na frente
+      else if (filtro.length === 10) {
+        // 00 0000-0000
+        this.telMask =
+          "(" +
+          filtro.slice(0, 2) +
+          ")" +
+          filtro.slice(2, 6) +
+          "-" +
+          filtro.slice(6, 10);
+      }
+
+      // com ddd (00)
+      else if (filtro.length === 11) {
+        // 00 0 0000-0000
+        this.telMask =
+          "(" +
+          filtro.slice(0, 2) +
+          ")" +
+          filtro.slice(2, 7) +
+          "-" +
+          filtro.slice(5, 9);
+      }
+
+      // com ddd (000)
+      else if (filtro.length >= 12) {
+        // 000 0 0000-0000
+        this.telMask =
+          "(" +
+          filtro.slice(0, 3) +
+          ")" +
+          filtro.slice(3, 8) +
+          "-" +
+          filtro.slice(8, 12);
+      }
+    }
+
+    // adiciona numero com mascara no input
+    this.form.telefone.value ? this.telMask : (this.form.telefone.value = "");
+
+    // valida telefone
     this.telefone = validateForm(this.form.telefone.value, "telefone");
+
+    // mostra as mensagens de erro
     this.errorMessage(this.form.telefone, this.telefone);
   }
 
   // valida assunto
   assunto() {
+    // mostra as mensagens de erro
     this.errorMessage(this.form.assunto, this.form.assunto.value);
   }
 
   // valida mensagem
   mensagem() {
+    // mostra as mensagens de erro
     this.errorMessage(this.form.mensagem, this.form.mensagem.value);
   }
 

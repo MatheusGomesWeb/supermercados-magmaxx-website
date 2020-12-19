@@ -1,0 +1,36 @@
+$componentName: "c-btn-scrollTop";
+
+.#{$componentName} {
+  width: 45px;
+  height: 45px;
+  padding: 1rem;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: $laranja;
+  animation: scrollTop 0.5s forwards linear alternate-reverse infinite;
+  cursor: pointer;
+  color: $branco;
+  border: 1px solid $verdeClaro;
+  transition: 0.3s;
+  z-index: -9999;
+
+  // hover do botao
+  &:hover {
+    opacity: 0.9;
+    transition: 0.3s;
+    border: 1px solid $verde;
+    color: $verde;
+  }
+
+  &::before {
+    content: "^";
+    display: block;
+    font-size: rem(52);
+    font-weight: bold;
+  }
+}

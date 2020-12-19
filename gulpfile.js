@@ -76,6 +76,8 @@ exports.default = () => {
 // Monitora alterações nos arquivos (.html, .scss, .js) e imagens (.jpg, .png, .gif, .svg etc...)
 exports.watch = gulp.parallel(browserSync, watch);
 
+exports.browserSync = browserSync;
+
 // Minificar e agrupar arquivos sass
 exports.minifySass = minifySass;
 

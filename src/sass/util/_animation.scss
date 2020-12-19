@@ -31,3 +31,14 @@
     transform: translateY(0);
   }
 }
+
+// scrollTop
+@keyframes scrollTop {
+  from {
+    transform: translateY(-15px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}

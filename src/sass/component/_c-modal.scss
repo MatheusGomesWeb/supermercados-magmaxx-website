@@ -29,7 +29,14 @@ $componentName: "c-modal";
     width: 35%;
     border-radius: 8px;
     position: relative;
-    padding: 0.1rem;
+
+    @include d(mobile) {
+      width: 70%;
+    }
+
+    @include d(desktop) {
+      // width: 45%;
+    }
   }
 
   // close X
@@ -50,7 +57,6 @@ $componentName: "c-modal";
     cursor: pointer;
     transition: 0.3s;
     &:hover {
-      //background-color: $laranja;
       border: 2px solid $verde;
       color: red;
     }
@@ -67,6 +73,8 @@ $componentName: "c-modal";
     font-size: rem(14);
     color: $branco;
     border-radius: 0 0 8px 8px;
+    position: relative;
+    top: -0.3rem;
   }
 
   // modal body
