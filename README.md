@@ -71,7 +71,7 @@
 [<img src="https://www.gstatic.com/images/icons/material/product/2x/pagespeed_64dp.png" width="46px"/>](https://developers.google.com/speed/pagespeed/insights/?hl=pt-br&url=https%3A%2F%2Fmatheusgomesweb.github.io%2Fsupermercados-magmaxx-website%2F&tab=desktop)
 
 - **Desktop** - 100%
-- **Mobile** - 95%
+- **Mobile** - 88%
 
 ---
 
