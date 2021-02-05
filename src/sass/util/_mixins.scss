@@ -3,6 +3,11 @@
   @return $pixel / $context + rem;
 }
 
+// Espaçamento paginas
+@mixin espacamentoPagina {
+  padding: rem(45) 0;
+}
+
 // tamanho das telas para os breakpoints
 $mobile: 599;
 $tablet: 600;

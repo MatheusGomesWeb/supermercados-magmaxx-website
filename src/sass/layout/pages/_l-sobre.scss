@@ -20,34 +20,6 @@ $layout: "l-sobre";
     flex-wrap: nowrap;
   }
 
-  // Modificador para tipo de Página
-  &--page {
-    flex-direction: column;
-  }
-
-  // Pagina - Sobre
-
-  // descricao
-  &__descricao {
-    flex: 2;
-    margin: 0 !important;
-
-    // paragrafos
-    p {
-      line-height: rem(30);
-
-      &:not(:nth-child(1)) {
-        margin-top: 1rem;
-      }
-    }
-
-    // citação
-    cite {
-      font-weight: $semi-bold;
-      font-size: rem(14);
-    }
-  }
-
   // nossas-lojas
   &__nossas-lojas {
     padding: 0 1.5rem;
@@ -63,72 +35,5 @@ $layout: "l-sobre";
     @include d(tablet-up) {
       padding: 0 1.5rem;
     }
-  }
-
-  // sobre nós
-  &__sobre-nos {
-    padding-right: 3rem;
-    margin: 0 !important;
-
-    // paragrafos
-    p {
-      line-height: rem(30);
-
-      &:not(:nth-child(1)) {
-        margin-top: 1rem;
-      }
-    }
-
-    @include d(mobile) {
-      padding-right: 0;
-    }
-  }
-
-  // Imagem sobre nos
-  &__image {
-    border-radius: 4px;
-    min-width: 100%;
-    min-height: 50%;
-
-    @include d(mobile) {
-      max-width: 100%;
-    }
-
-    @include d(tablet) {
-      max-width: 100%;
-    }
-
-    @include d(tablet-up) {
-      min-width: 450px;
-      max-width: 450px;
-    }
-
-    @include d(desktop-up) {
-      min-height: 96%;
-    }
-  }
-
-  // Missão
-  &__missao {
-    padding-right: 3rem;
-
-    // paragrafos
-    p {
-      line-height: rem(30);
-
-      &:not(:nth-child(1)) {
-        margin-top: 1rem;
-      }
-    }
-
-    @include d(mobile) {
-      padding-right: 0;
-    }
-  }
-
-  // titulo {
-  &__title {
-    width: 100%;
-    margin-top: rem(35);
   }
 }

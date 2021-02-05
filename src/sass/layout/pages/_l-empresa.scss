@@ -1,0 +1,131 @@
+$component_name: ".l-empresa";
+
+#{$component_name} {
+  display: flex;
+  flex-direction: column;
+  @include espacamentoPagina;
+
+  // Sobre
+  &__sobre {
+    display: flex;
+
+    @include d(mobile) {
+      flex-direction: column-reverse;
+    }
+
+    // Sobre descrição
+    &-descricao {
+      padding-right: 3rem;
+
+      // paragrafo
+      & p {
+        line-height: rem(30);
+
+        &:not(:nth-child(1)) {
+          margin-top: 1rem;
+        }
+      }
+
+      @include d(mobile) {
+        padding-right: 0;
+      }
+    }
+
+    // Sobre imagem
+    &-imagem {
+      img {
+        border-radius: 4px;
+        min-width: 100%;
+        min-height: 50%;
+
+        @include d(mobile) {
+          max-width: 100%;
+          margin-bottom: 1rem;
+        }
+
+        @include d(tablet) {
+          width: 300px;
+          min-height: 300px;
+        }
+
+        @include d(tablet-up) {
+          min-width: 450px;
+          max-width: 450px;
+        }
+
+        @include d(desktop-up) {
+          min-height: 96%;
+        }
+      }
+    }
+  }
+
+  // Missao - Visao
+  &__missao-visao {
+    display: flex;
+  }
+
+  // Missão
+  &__missao {
+    &-descricao {
+      // paragrafo
+      & p {
+        line-height: rem(30);
+        padding-right: 3rem;
+
+        &:not(:nth-child(1)) {
+          margin-top: 1rem;
+        }
+      }
+    }
+
+    // c-title
+    & .c-title {
+      margin-top: 2rem;
+    }
+  }
+
+  // Visão
+  &__visao {
+    &-descricao {
+      // paragrafo
+      & p {
+        line-height: rem(30);
+
+        &:not(:nth-child(1)) {
+          margin-top: 1rem;
+        }
+      }
+    }
+
+    // c-title
+    & .c-title {
+      margin-top: 2rem;
+    }
+  }
+
+  // Valores
+  &__valores {
+    &-descricao {
+      // paragrafo
+      & p {
+        line-height: rem(30);
+
+        &:not(:nth-child(1)) {
+          margin-top: 1rem;
+        }
+
+        // citação
+        cite {
+          font-weight: $semi-bold;
+          font-size: rem(14);
+        }
+      }
+    }
+
+    // c-title
+    & .c-title {
+      margin-top: 2rem;
+    }
+  }
+}
