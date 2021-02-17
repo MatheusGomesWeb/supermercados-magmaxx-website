@@ -202,9 +202,9 @@ export default class Form {
         this.form.enviar.disabled = true;
 
         // recarrega a pagina em 3 segundos
-        setTimeout(() => {
-          location.reload(true);
-        }, 3000);
+        // setTimeout(() => {
+        this.form.submit();
+        // }, 3000);
 
         // Se o post na API der erro
       } else {
@@ -217,9 +217,9 @@ export default class Form {
         this.form.enviar.disabled = true;
 
         // recarrega a pagina em 3 segundos
-        setTimeout(() => {
+        /*  setTimeout(() => {
           location.reload(true);
-        }, 3000);
+        }, 3000); */
       }
     }
   }
