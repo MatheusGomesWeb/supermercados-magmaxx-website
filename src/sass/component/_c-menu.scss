@@ -17,13 +17,14 @@ $componentName: "c-menu";
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: rem(20) 0;
+    padding: $medio 0;
 
     // alinha os links um embaixo do outro no mobile e tablet
     @include d(mobile) {
       flex-direction: column;
       align-items: flex-start;
       display: none;
+      padding-left: $medio !important;
     }
 
     @include d(tablet) {
@@ -50,7 +51,7 @@ $componentName: "c-menu";
 
   // Nav links
   &__item {
-    font-size: rem(19);
+    font-size: $medio;
     color: $branco;
     text-transform: uppercase;
     display: flex;
@@ -62,7 +63,7 @@ $componentName: "c-menu";
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
-      font-size: rem(16);
+      font-size: $normal;
     }
 
     @include d(tablet) {
@@ -71,12 +72,12 @@ $componentName: "c-menu";
       align-items: flex-start;
 
       //  margin: 0.5rem 0;
-      font-size: rem(16);
+      font-size: $normal;
     }
 
     @include d(tablet-up) {
       margin: 0;
-      font-size: rem(19);
+      font-size: $medio;
       flex-direction: row;
       align-items: center;
     }
@@ -90,7 +91,7 @@ $componentName: "c-menu";
         height: 1px;
         background: $branco;
         display: block;
-        margin: 0.5rem 0;
+        margin: 0.8rem 0;
       }
 
       @include d(tablet) {
@@ -99,13 +100,13 @@ $componentName: "c-menu";
         height: 1px;
         background: $branco;
         display: block;
-        margin: 0.5rem 0;
+        margin: 0.8rem 0;
       }
 
       @include d(tablet-up) {
         content: "";
         width: 1px;
-        height: rem(19);
+        height: $medio;
         background: $branco;
         display: block;
         margin: 0 1rem;
@@ -121,7 +122,7 @@ $componentName: "c-menu";
       color: $branco;
       text-decoration: none;
       &:hover {
-        color: $verdeClaro;
+        color: $preto;
         transition: 0.3s;
       }
     }
@@ -136,7 +137,7 @@ $componentName: "c-menu";
       align-items: center;
       justify-content: space-between;
       background-color: $verdeClaro;
-      padding-right: rem(20);
+      padding-right: $espacamento_medio;
     }
 
     // botao
@@ -152,6 +153,7 @@ $componentName: "c-menu";
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      outline: 0;
 
       // trez traços
       &::before {
@@ -159,7 +161,7 @@ $componentName: "c-menu";
         width: 58%;
         height: 4px;
         background-color: $laranja;
-        border-radius: 4px;
+        //border-radius: 2px;
         transition: 0.3s;
         box-shadow: 0 8px $laranja, 0 -8px $laranja;
       }
@@ -198,8 +200,8 @@ $componentName: "c-menu";
 
     // titulo do menu mobile
     &__mobile-title {
-      font-weight: bold;
-      font-size: rem(19);
+      font-weight: $semi-bold;
+      font-size: $medio;
       color: $branco;
       align-self: center;
     }

@@ -7,11 +7,11 @@ $componentName: "c-title";
   height: 44px;
   background: none;
   border: 1px solid $laranja;
-  margin-bottom: rem(25);
+  margin-bottom: $espacamento_medio;
 
   // altera tamanho do botao no mobile
   @include d(mobile) {
-    max-width: 250px;
+    width: 230px;
   }
 
   // borda verde virada no botao
@@ -34,12 +34,12 @@ $componentName: "c-title";
   &__text {
     color: $preto;
     font-weight: $bold;
-    font-size: rem(22);
+    font-size: $grande;
     transform: rotateZ(1.5deg);
     text-transform: uppercase;
 
     @include d(mobile) {
-      font-size: rem(16);
+      font-size: $normal;
     }
   }
 }

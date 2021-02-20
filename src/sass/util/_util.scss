@@ -1,10 +1,8 @@
 // Limita e centraliza os elementos para ficar sempre centralizado no monitor e não grudar nos cantos da tela
 .u-container {
   width: 100%;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  padding-left: 1.5rem !important;
-  padding-right: 1.5rem !important;
+  margin: 0 auto;
+  padding: 0 $espacamento_medio;
 
   @include d(mobile) {
     max-width: $mobile + px;

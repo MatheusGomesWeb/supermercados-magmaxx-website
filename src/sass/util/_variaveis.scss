@@ -1,18 +1,24 @@
 // Fontes
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,500&display=swap");
 $montserrat: "Montserrat", sans-serif;
+
+// Font weight
 $regular: 400;
 $medium: 500;
 $semi-bold: 600;
 $bold: 700;
 
-// Tamanho fontes
-/*
-  16px
-  19px
-  22px
-  32px
-*/
+// Espacamentos
+$espacamento_pequeno: rem(15);
+$espacamento_medio: rem(30);
+$espacamento_grande: rem(60);
+
+// Tramanho fontes
+$pequeno: rem(14);
+$normal: rem(16);
+$medio: rem(19);
+$grande: rem(22);
+$gigante: rem(32);
 
 // Cores
 $laranja: #e2781c;
@@ -20,4 +26,4 @@ $verde: #56984a;
 $verdeClaro: #5ca151;
 $cinza: #dedddd;
 $branco: #fff;
-$preto: #000;
+$preto: #222;

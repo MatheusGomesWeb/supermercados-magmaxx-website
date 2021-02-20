@@ -3,28 +3,26 @@ $componentName: "c-card";
 .#{$componentName} {
   // Titulo
   &__title {
-    font-weight: bold;
+    font-weight: $semi-bold;
     text-transform: uppercase;
-    font-size: rem(22);
+    font-size: $grande;
   }
 
   // Descrição
   &__descricao {
-    font-size: rem(16);
-    line-height: rem(30);
-
-    margin: rem(25) 0;
+    font-size: $normal;
+    line-height: calc(16px * 1.5);
+    margin: $espacamento_medio 0;
   }
 
   // Link com a borda preta
   &__link {
     width: 69px;
-    height: 37px;
-    height: auto;
+    max-height: 37px;
     border: 1px solid $laranja;
     transform: rotateZ(4deg);
     text-align: center;
-    font-size: rem(16);
+    font-size: $normal;
 
     &:hover {
       border-color: $verde;
@@ -50,7 +48,7 @@ $componentName: "c-card";
   & a {
     text-decoration: none;
     color: $laranja;
-    font-weight: $bold;
+    font-weight: $semi-bold;
     display: inline-block;
 
     &:hover {

@@ -47,12 +47,12 @@ $componentName: "c-button";
   &__text {
     color: $branco;
     font-weight: $semi-bold;
-    font-size: rem(19);
+    font-size: $medio;
     transform: rotateZ(2deg);
     text-transform: uppercase;
 
     @include d(mobile) {
-      font-size: rem(16);
+      font-size: $normal;
     }
   }
 }
