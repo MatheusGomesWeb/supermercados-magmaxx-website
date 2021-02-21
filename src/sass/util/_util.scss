@@ -2,11 +2,8 @@
 .u-container {
   width: 100%;
   margin: 0 auto;
-  padding: 0 $espacamento_medio;
-
-  @include d(mobile) {
-    max-width: $mobile + px;
-  }
+  padding-left: $espacamento_medio !important;
+  padding-right: $espacamento_medio !important;
 
   @include d(tablet) {
     max-width: 720px;
@@ -14,6 +11,8 @@
 
   @include d(tablet-up) {
     max-width: $tablet-up + px;
+    padding-left: $espacamento_pequeno !important;
+    padding-right: $espacamento_pequeno !important;
   }
 
   @include d(desktop) {
@@ -21,7 +20,7 @@
   }
 
   @include d(desktop-up) {
-    max-width: $desktop-up + px;
+    max-width: $desktop + px;
   }
 }
 

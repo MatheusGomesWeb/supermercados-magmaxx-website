@@ -3,129 +3,85 @@ $component_name: ".l-empresa";
 #{$component_name} {
   display: flex;
   flex-direction: column;
-  padding: $espacamento_medio 0;
+  padding: $espacamento_medio 0 $espacamento_grande 0;
 
-  // Sobre
-  &__sobre {
+  // Content
+  &__content {
     display: flex;
+    flex-wrap: wrap;
 
     @include d(mobile) {
-      flex-direction: column-reverse;
+      flex-direction: column;
     }
 
-    // Sobre descrição
-    &-descricao {
-      padding-right: 3rem;
+    & p {
+      font-size: $normal;
+      line-height: calc(16px * 1.5);
 
-      // paragrafo
-      & p {
-        line-height: rem(30);
-
-        &:not(:nth-child(1)) {
-          margin-top: 1rem;
-        }
+      &:not(:nth-child(1)) {
+        margin-top: $espacamento_pequeno;
       }
+    }
+
+    // Content: sobre
+    &-sobre {
+      width: 70%;
+      padding-right: $espacamento_grande;
 
       @include d(mobile) {
+        width: 100%;
         padding-right: 0;
       }
-    }
 
-    // Sobre imagem
-    &-imagem {
-      img {
-        border-radius: 4px;
-        min-width: 100%;
-        min-height: 50%;
-
-        @include d(mobile) {
-          max-width: 100%;
-          margin-bottom: 1rem;
-        }
-
-        @include d(tablet) {
-          width: 300px;
-          min-height: 300px;
-        }
-
-        @include d(tablet-up) {
-          min-width: 450px;
-          max-width: 450px;
-        }
-
-        @include d(desktop-up) {
-          min-height: 96%;
-        }
-      }
-    }
-  }
-
-  // Missao - Visao
-  &__missao-visao {
-    display: flex;
-  }
-
-  // Missão
-  &__missao {
-    &-descricao {
-      // paragrafo
       & p {
-        line-height: rem(30);
-        padding-right: 3rem;
-
-        &:not(:nth-child(1)) {
-          margin-top: 1rem;
+        &:nth-last-child(1) {
+          margin-bottom: $espacamento_medio;
         }
       }
     }
 
-    // c-title
-    & .c-title {
-      margin-top: 2rem;
-    }
-  }
+    // Content: sobre-img
+    &-sobre-img {
+      width: 30%;
+      text-align: right;
 
-  // Visão
-  &__visao {
-    &-descricao {
-      // paragrafo
-      & p {
-        line-height: rem(30);
+      @include d(mobile) {
+        width: 100%;
+        text-align: center;
+      }
 
-        &:not(:nth-child(1)) {
-          margin-top: 1rem;
-        }
+      & img {
+        border-radius: 8px;
+        max-width: 100%;
+        max-height: 363px;
       }
     }
 
-    // c-title
-    & .c-title {
-      margin-top: 2rem;
-    }
-  }
+    // Content: Missão
+    &-missao {
+      width: 50%;
+      padding-right: $espacamento_medio;
 
-  // Valores
-  &__valores {
-    &-descricao {
-      // paragrafo
-      & p {
-        line-height: rem(30);
-
-        &:not(:nth-child(1)) {
-          margin-top: 1rem;
-        }
-
-        // citação
-        cite {
-          font-weight: $semi-bold;
-          font-size: rem(14);
-        }
+      @include d(mobile) {
+        width: 100%;
+        padding-right: 0;
+        margin-top: $espacamento_medio;
       }
     }
 
-    // c-title
-    & .c-title {
-      margin-top: 2rem;
+    // Content: Visão
+    &-visao {
+      width: 50%;
+
+      @include d(mobile) {
+        width: 100%;
+        margin-top: $espacamento_medio;
+      }
+    }
+
+    // Content: Valores
+    &-valores {
+      margin-top: $espacamento_medio;
     }
   }
 }
