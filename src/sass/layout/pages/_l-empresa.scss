@@ -3,7 +3,7 @@ $component_name: ".l-empresa";
 #{$component_name} {
   display: flex;
   flex-direction: column;
-  padding: $espacamento_medio 0 $espacamento_grande 0;
+  @include espacamentoPagina;
 
   // Content
   &__content {

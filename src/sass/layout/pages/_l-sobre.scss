@@ -6,7 +6,7 @@ $layout: "l-sobre";
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: rem(45) 0;
+  @include espacamentoPagina;
 
   @include d(mobile) {
     flex-direction: column;

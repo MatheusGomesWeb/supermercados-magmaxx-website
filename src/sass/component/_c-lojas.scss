@@ -9,14 +9,14 @@ $componentName: "c-lojas";
   background: url("../img/end/map1.jpg") no-repeat;
   background-position: center top;
   background-size: cover;
-  padding: rem(45);
+  padding: $espacamento_medio;
   color: $branco;
   font-size: rem(22);
   font-weight: $medium;
   border-radius: 4px;
 
   @include d(mobile) {
-    padding-left: rem(22);
+    padding-left: $espacamento_medio;
     font-size: rem(19);
   }
 
@@ -28,7 +28,7 @@ $componentName: "c-lojas";
 
   &__list-item {
     &:not(:nth-child(1)) {
-      margin-top: 1.5rem;
+      margin-top: $espacamento_pequeno;
     }
   }
 
@@ -41,6 +41,6 @@ $componentName: "c-lojas";
     background-size: cover;
     justify-content: flex-end;
     text-align: right;
-    margin: rem(45) 0;
+    margin: $espacamento_medio 0;
   }
 }

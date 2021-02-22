@@ -11,7 +11,7 @@ $componentName: "c-card";
   // Descrição
   &__descricao {
     font-size: $normal;
-    line-height: calc(16px * 1.5);
+    line-height: alturaLinha(16);
     margin: $espacamento_medio 0;
   }
 

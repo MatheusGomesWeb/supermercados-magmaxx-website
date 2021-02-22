@@ -2,29 +2,29 @@ $componentName: "l-contato";
 
 .#{$componentName} {
   width: 100%;
-  padding: rem(45) 0;
+  @include espacamentoPagina;
 
   // formulario
   &__formulario {
     input[type="text"],
     input[type="email"],
     textarea {
-      background-color: #dedddd;
+      background-color: $cinza;
       border: none;
       outline: 0;
       color: $preto;
       width: 100%;
-      padding: 1rem;
-      margin-bottom: 1rem;
-      font-size: rem(16);
-      border: 1px solid #dedddd;
+      padding: $espacamento_pequeno;
+      margin-bottom: $espacamento_pequeno;
+      font-size: $normal;
+      border: 1px solid $cinza;
       border-radius: 4px;
       transition: 0.3s;
 
       &::placeholder {
         color: #6a6a6a;
         font-weight: $medium;
-        font-size: rem(16);
+        font-size: $normal;
       }
 
       &:focus {
@@ -41,9 +41,9 @@ $componentName: "l-contato";
       color: $branco;
       background-color: $laranja;
       border-radius: 8px;
-      padding: 1rem;
+      padding: $espacamento_pequeno;
       border: none;
-      font-size: rem(19);
+      font-size: $medio;
       width: 140px;
       float: right;
       transition: 0.3s;
@@ -51,7 +51,7 @@ $componentName: "l-contato";
 
       @include d(mobile) {
         width: 100px;
-        padding: 0.8rem 0.5rem;
+        padding: $espacamento_pequeno;
       }
 
       &:hover {

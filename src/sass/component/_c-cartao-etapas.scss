@@ -7,7 +7,7 @@ $componentName: "c-cartao-etapas";
   color: $branco;
   font-weight: $bold;
   font-size: rem(22);
-  padding: rem(25) rem(45);
+  padding: $espacamento_medio;
   border-radius: rem(38);
   display: flex;
   align-items: center;
@@ -15,11 +15,11 @@ $componentName: "c-cartao-etapas";
   align-self: flex-end;
 
   &:not(:nth-last-child(1)) {
-    margin-bottom: rem(45);
+    margin-bottom: $espacamento_medio;
   }
 
   @include d(mobile) {
-    padding: rem(25) rem(45);
+    padding: $espacamento_pequeno;
     flex-direction: column;
     align-self: flex-start;
     align-items: center;
@@ -27,7 +27,7 @@ $componentName: "c-cartao-etapas";
   }
 
   @include d(tablet) {
-    padding: rem(25) rem(45);
+    padding: $espacamento_medio;
     flex-direction: column;
     align-self: flex-start;
     align-items: center;
@@ -35,7 +35,7 @@ $componentName: "c-cartao-etapas";
   }
 
   @include d(tablet-up) {
-    padding: rem(25) rem(45);
+    padding: $espacamento_medio;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -48,24 +48,24 @@ $componentName: "c-cartao-etapas";
     font-size: rem(152);
     font-weight: bold;
     color: $branco;
-    margin-left: rem(45);
-    margin-right: rem(45);
+    margin-left: $espacamento_medio;
+    margin-right: $espacamento_medio;
 
     @include d(tablet) {
       margin-left: 0;
     }
 
     @include d(desktop) {
-      margin-left: rem(45);
+      margin-left: $espacamento_medio;
     }
   }
 
   // paragrafo
   &__descricao {
     text-transform: uppercase;
-    line-height: rem(30);
+    line-height: alturaLinha(16);
     flex: 2;
-    font-size: rem(16);
+    font-size: $normal;
   }
 
   // loja de aplicativos
@@ -78,11 +78,11 @@ $componentName: "c-cartao-etapas";
     text-align: center;
 
     @include d(mobile) {
-      margin: rem(45) 0;
+      margin: $espacamento_medio 0;
     }
 
     @include d(tablet) {
-      margin: rem(45) 0;
+      margin: $espacamento_medio 0;
     }
 
     @include d(tablet-up) {
@@ -96,14 +96,14 @@ $componentName: "c-cartao-etapas";
     span {
       width: 200px;
       background-color: $preto;
-      padding: rem(15);
+      padding: $espacamento_pequeno;
       border-radius: rem(28);
-      font-size: rem(19);
+      font-size: $medio;
       border: 1px solid $preto;
       cursor: pointer;
 
       &:not(:nth-child(1)) {
-        margin-top: 1.5rem;
+        margin-top: $espacamento_pequeno;
       }
 
       &:hover {

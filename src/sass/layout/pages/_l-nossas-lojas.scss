@@ -3,5 +3,5 @@ $componentName: "l-nossas-lojas";
 // pagina nossas lojas
 .#{$componentName} {
   width: 100%;
-  padding: rem(45) 0;
+  @include espacamentoPagina;
 }

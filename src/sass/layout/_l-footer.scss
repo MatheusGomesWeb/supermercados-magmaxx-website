@@ -28,7 +28,17 @@ $layout: "l-footer";
   }
 
   &__list {
-    margin-bottom: $espacamento_pequeno;
+    @include d(mobile) {
+      margin-bottom: $espacamento_pequeno;
+    }
+
+    @include d(tablet) {
+      margin-bottom: $espacamento_pequeno;
+    }
+
+    @include d(tablet-up) {
+      margin-bottom: 0;
+    }
 
     &:nth-child(2) {
       margin-top: $espacamento_pequeno;
@@ -67,26 +77,25 @@ $layout: "l-footer";
       left: -5rem;
 
       @include d(mobile) {
-        top: -1.5rem;
+        top: -$espacamento_medio;
         width: 80%;
         height: 1px;
         left: 10%;
       }
-
       @include d(tablet) {
-        left: -3rem;
+        left: -$espacamento_grande;
       }
 
       @include d(tablet-up) {
-        left: -1rem;
+        left: -1rem !important;
       }
 
       @include d(desktop) {
-        left: -3rem;
+        left: -4rem !important;
       }
 
       @include d(desktop-up) {
-        left: -8rem;
+        left: -10rem !important;
       }
     }
 
@@ -108,19 +117,19 @@ $layout: "l-footer";
       }
 
       @include d(tablet) {
-        right: -3rem;
+        right: -$espacamento_grande !important;
       }
 
       @include d(tablet-up) {
-        right: -1rem;
+        right: -1rem !important;
       }
 
       @include d(desktop) {
-        right: -3rem;
+        right: -4rem !important;
       }
 
       @include d(desktop-up) {
-        right: -8rem;
+        right: -10rem !important;
       }
     }
 
@@ -219,7 +228,7 @@ $layout: "l-footer";
     }
 
     &__direitos {
-      line-height: calc(16px * 1.5);
+      line-height: alturaLinha(16);
 
       strong {
         font-weight: $semi-bold;
