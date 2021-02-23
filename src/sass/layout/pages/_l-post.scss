@@ -1,0 +1,78 @@
+$componentName: "l-post";
+
+.#{$componentName} {
+  @include espacamentoPagina;
+  display: flex;
+  flex-direction: column;
+  margin-top: $espacamento_pequeno;
+
+  /* Descricao do post */
+  &__desc-post {
+    margin: $espacamento_medio auto $espacamento_grande auto;
+    transform: rotateZ(1.3deg);
+  }
+
+  /* artigo */
+  &__artigo {
+    margin-top: $espacamento_grande;
+    display: flex;
+    flex-direction: column;
+
+    & p {
+      font-size: $medio;
+      line-height: alturaLinha(22);
+
+      &:not(:nth-child(1)) {
+        margin-top: $espacamento_medio;
+      }
+
+      // Links
+      & a {
+        color: $laranja;
+        text-decoration: none;
+        font-weight: bold;
+
+        &:hover {
+          color: $preto;
+          transition: 0.3s;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    // Imagens
+    & img {
+      max-width: 100%;
+      height: 467px;
+      align-self: center;
+      border-radius: 8px;
+      box-shadow: 1px 1px 2px $preto, -1px -1px 2px $preto;
+      margin: $espacamento_grande 0;
+    }
+
+    // figure
+    & figure {
+      width: 60%;
+      margin: $espacamento_medio auto $espacamento_grande auto;
+      border-bottom: 1px solid $preto;
+      padding-bottom: $espacamento_pequeno;
+
+      & img {
+        margin: 0;
+      }
+
+      & figcaption {
+        width: 100%;
+        line-height: alturaLinha(14);
+        font-size: $pequeno;
+        margin-top: $espacamento_pequeno;
+        padding-bottom: $espacamento_pequeno;
+      }
+    }
+
+    // Titulo
+    & h1 {
+      font-size: $gigante;
+    }
+  }
+}
