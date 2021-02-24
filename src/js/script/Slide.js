@@ -15,6 +15,9 @@ export default class Slide {
 
     // bind
     this.slideBullets = this.slideBullets.bind(this);
+
+    // time delay
+    this.delay = 5000;
   }
 
   // removendo atributo das imagens
@@ -55,7 +58,7 @@ export default class Slide {
   // inicia a transição das imagens
   start() {
     // posição de inicio
-    this.slideCount = 0;
+    this.slideCount = 1;
 
     // quantidade de imagens
     this.slideSize = this.imagens.length;
@@ -69,20 +72,23 @@ export default class Slide {
       this.addAttributes(this.slideCount);
 
       // incrementa +1 ao index para ir para a proxima imagem
-      this.slideCount += 1;
+      this.slideCount++;
 
       // se o index for do tamanho do slide, reinicia o index para 0 (cria um loop infinito)
       if (this.slideCount === this.slideSize) {
         this.slideCount = 0;
       }
-    }, 5000);
+    }, this.delay);
   }
 
   // inicia a classe
   init() {
     if (this.wrapper && this.imagens[0]) {
+      // Inicia a primeira imagem ativa
+      this.imagens[0].dataset.slide = "active";
       this.start();
       this.slideBullets();
+      console.log("test");
     }
   }
 }

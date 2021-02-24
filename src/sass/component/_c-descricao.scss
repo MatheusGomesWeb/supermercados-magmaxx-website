@@ -1,0 +1,13 @@
+$componentName: "c-descricao";
+
+.#{$componentName} {
+  color: $preto;
+  font-size: $normal;
+  width: 100%;
+  line-height: alturaLinha(16);
+  margin-bottom: $espacamento_medio;
+
+  @include d(mobile) {
+    margin-bottom: $grande;
+  }
+}

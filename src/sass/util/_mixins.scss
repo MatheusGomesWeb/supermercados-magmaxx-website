@@ -44,7 +44,7 @@ $desktop-up: 1800;
   }
 
   @include d(tablet) {
-    padding: $espacamento_medio 0;
+    padding: $espacamento_grande 0;
   }
 
   @include d(desktop) {

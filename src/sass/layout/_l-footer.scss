@@ -48,6 +48,7 @@ $layout: "l-footer";
       list-style: none;
       padding: 0.5rem 0;
       text-align: center;
+      line-height: alturaLinha(16);
 
       &--verde {
         display: flex;
@@ -83,19 +84,19 @@ $layout: "l-footer";
         left: 10%;
       }
       @include d(tablet) {
-        left: -$espacamento_grande;
+        left: -$espacamento_medio;
       }
 
       @include d(tablet-up) {
-        left: -1rem !important;
+        left: -$espacamento_pequeno;
       }
 
       @include d(desktop) {
-        left: -4rem !important;
+        left: -$espacamento_medio;
       }
 
       @include d(desktop-up) {
-        left: -10rem !important;
+        left: -10rem;
       }
     }
 
@@ -117,19 +118,19 @@ $layout: "l-footer";
       }
 
       @include d(tablet) {
-        right: -$espacamento_grande !important;
+        right: -$espacamento_grande;
       }
 
       @include d(tablet-up) {
-        right: -1rem !important;
+        right: -$espacamento_pequeno;
       }
 
       @include d(desktop) {
-        right: -4rem !important;
+        right: -$espacamento_medio;
       }
 
       @include d(desktop-up) {
-        right: -10rem !important;
+        right: -10rem;
       }
     }
 
@@ -224,6 +225,13 @@ $layout: "l-footer";
 
       @include d(desktop) {
         justify-content: space-around;
+      }
+
+      // Remove o espacamento no micro-mobile (max: 320px)
+      @media (max-width: 320px) {
+        &.u-container {
+          padding: 0 !important;
+        }
       }
     }
 

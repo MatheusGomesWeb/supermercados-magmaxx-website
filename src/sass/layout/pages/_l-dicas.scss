@@ -36,15 +36,6 @@ $componentName: "l-dicas";
       flex-direction: row !important;
     }
   }
-  // paragrafo
-  &__descricao {
-    line-height: alturaLinha(16);
-    margin-bottom: $espacamento_medio;
-
-    @include d(mobile) {
-      margin: $espacamento_pequeno 0 $espacamento_medio 0 !important;
-    }
-  }
 
   // nome do prato
   &__nome-prato {

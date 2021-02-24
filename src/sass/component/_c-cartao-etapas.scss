@@ -66,6 +66,17 @@ $componentName: "c-cartao-etapas";
     line-height: alturaLinha(16);
     flex: 2;
     font-size: $normal;
+
+    @include d(mobile) {
+      text-align: center;
+    }
+
+    @include d(tablet) {
+      text-align: center;
+    }
+    @include d(tablet-up) {
+      text-align: left;
+    }
   }
 
   // loja de aplicativos

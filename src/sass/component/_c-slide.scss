@@ -52,7 +52,8 @@ $componentName: "c-slide";
 
     & [data-slide="active"] {
       opacity: 1;
-      animation: animeLeft 0.3s forwards linear;
+      animation: animeLeft 0.3s forwards ease-in-out linear;
+      transition: 0.3s;
     }
   }
 

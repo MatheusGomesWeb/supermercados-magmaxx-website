@@ -12,6 +12,7 @@ $componentName: "c-title";
   // altera tamanho do botao no mobile
   @include d(mobile) {
     width: 230px;
+    margin-bottom: $grande;
   }
 
   // borda verde virada no botao
