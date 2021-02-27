@@ -17,6 +17,7 @@ $componentName: "l-post";
       line-height: alturaLinha(32);
       margin-bottom: $espacamento_medio;
       text-transform: uppercase;
+      text-align: center;
 
       @include d(mobile) {
         line-height: alturaLinha(22);
@@ -79,7 +80,7 @@ $componentName: "l-post";
       height: 467px;
       align-self: center;
       border-radius: 8px;
-      box-shadow: 1px 1px 2px $preto, -1px -1px 2px $preto;
+      @include linhasBottom;
       margin: $espacamento_grande 0;
 
       @include d(mobile) {
