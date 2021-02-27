@@ -1,23 +1,36 @@
 export default class Slide {
-  constructor(wrapper, imagens, bullets, next, prev) {
+  constructor(wrapper, imagens, bulletsWrapper, next, prev) {
     // slide wrapper
     this.wrapper = document.querySelector(wrapper);
 
     // images
     this.imagens = this.wrapper.querySelectorAll(imagens);
 
-    // bullets
-    this.bullets = this.wrapper.querySelectorAll(bullets);
-
     // arrows
     this.next = this.wrapper.querySelector(next);
     this.prev = this.wrapper.querySelector(prev);
+
+    // Bullets Wrapper
+    this.bulletsWrapper = document.querySelector(bulletsWrapper);
 
     // bind
     this.slideBullets = this.slideBullets.bind(this);
 
     // time delay
     this.delay = 5000;
+  }
+
+  // Adiciona as bolinha automaticamente
+  addBullets() {
+    const bulletEl = `<div class="c-slide__bullets-item"></div>`;
+
+    this.bulletsWrapper.innerHTML = "";
+    for (let i = 0; i <= this.imagens.length - 1; i++) {
+      this.bulletsWrapper.innerHTML += bulletEl;
+    }
+
+    // Armazena um array com as bolinhas criadas no atributo da classe
+    this.bullets = document.querySelectorAll(".c-slide__bullets-item");
   }
 
   // removendo atributo das imagens
@@ -34,6 +47,9 @@ export default class Slide {
 
   // bolinhas do slide
   slideBullets() {
+    // Adiciona as bolinha no slide
+    this.addBullets();
+
     // Percorre todas as bolinhas e ao clicar nelas aparece a imagem correspondente
     this.bullets.forEach((bullet, index) => {
       // Adiciona evento de click
@@ -86,9 +102,12 @@ export default class Slide {
     if (this.wrapper && this.imagens[0]) {
       // Inicia a primeira imagem ativa
       this.imagens[0].dataset.slide = "active";
+
       this.start();
       this.slideBullets();
-      console.log("test");
+
+      // Inicia a primeira bolinha ativa
+      this.bullets[0].dataset.bullets = "active";
     }
   }
 }

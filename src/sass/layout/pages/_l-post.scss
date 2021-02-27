@@ -1,22 +1,55 @@
 $componentName: "l-post";
 
 .#{$componentName} {
-  @include espacamentoPagina;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  margin-top: $espacamento_pequeno;
+  @include espacamentoPagina;
 
-  /* Descricao do post */
-  &__desc-post {
-    margin: $espacamento_medio auto $espacamento_grande auto;
-    transform: rotateZ(1.3deg);
+  /* Titulo do post */
+  &__title {
+    @include linhasBottom;
+
+    // Titulo
+    &-text {
+      font-size: $gigante;
+      color: $preto;
+      line-height: alturaLinha(32);
+      margin-bottom: $espacamento_medio;
+      text-transform: uppercase;
+
+      @include d(mobile) {
+        line-height: alturaLinha(22);
+        font-size: $grande;
+        margin-bottom: $espacamento_pequeno;
+      }
+    }
+
+    // Descrição
+    &-desc {
+      margin-bottom: $espacamento_medio;
+      font-size: $normal;
+      line-height: alturaLinha(16);
+      text-align: center;
+
+      @include d(mobile) {
+        margin-bottom: $espacamento_pequeno;
+        font-size: $pequeno;
+        line-height: alturaLinha(14);
+        text-align: left;
+      }
+    }
   }
 
   /* artigo */
   &__artigo {
-    margin-top: $espacamento_grande;
     display: flex;
     flex-direction: column;
+    margin-top: $espacamento_grande;
+
+    @include d(mobile) {
+      margin-top: $espacamento_medio;
+    }
 
     & p {
       font-size: $medio;
@@ -42,20 +75,29 @@ $componentName: "l-post";
 
     // Imagens
     & img {
-      max-width: 100%;
+      width: 80%;
       height: 467px;
       align-self: center;
       border-radius: 8px;
       box-shadow: 1px 1px 2px $preto, -1px -1px 2px $preto;
       margin: $espacamento_grande 0;
+
+      @include d(mobile) {
+        width: 100%;
+      }
     }
 
     // figure
     & figure {
-      width: 60%;
+      width: 80%;
       margin: $espacamento_medio auto $espacamento_grande auto;
-      border-bottom: 1px solid $preto;
+      @include linhasBottom;
       padding-bottom: $espacamento_pequeno;
+      text-align: center;
+
+      @include d(mobile) {
+        width: 100%;
+      }
 
       & img {
         margin: 0;

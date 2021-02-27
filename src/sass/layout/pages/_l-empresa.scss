@@ -43,11 +43,14 @@ $component_name: ".l-empresa";
     // Content: sobre-img
     &-sobre-img {
       width: 30%;
+      height: 100%;
       text-align: right;
+      padding-bottom: $espacamento_medio;
 
       @include d(mobile) {
         width: 100%;
         text-align: center;
+        padding-bottom: 0;
       }
 
       & img {

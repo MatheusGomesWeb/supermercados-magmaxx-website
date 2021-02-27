@@ -43,43 +43,4 @@ $componentName: "c-title";
       font-size: $normal;
     }
   }
-
-  // Modificadores
-  &--post {
-    width: auto;
-    min-height: 47px;
-    border: none !important;
-    position: relative;
-    margin: $espacamento_grande 0;
-
-    & h1 {
-      font-size: $gigante;
-      line-height: alturaLinha(32);
-    }
-
-    &::after {
-      content: "";
-      display: block;
-      width: 100%;
-      height: 1px;
-      background-color: $laranja;
-      position: absolute;
-      bottom: -$espacamento_grande;
-    }
-
-    & .c-title__border {
-      flex-direction: column;
-      border: none !important;
-
-      &::after {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 1px;
-        background-color: $verde;
-        position: absolute;
-        bottom: -$espacamento_grande;
-      }
-    }
-  }
 }

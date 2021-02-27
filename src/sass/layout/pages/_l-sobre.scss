@@ -21,19 +21,19 @@ $layout: "l-sobre";
   }
 
   // nossas-lojas
-  &__nossas-lojas {
-    padding: 0 1.5rem;
+  .c-card:nth-child(2) {
+    padding: 0 $espacamento_grande;
 
     @include d(mobile) {
-      padding: rem(45) 0;
+      padding: $espacamento_medio 0;
     }
 
     @include d(tablet) {
-      padding: rem(45) 0;
+      padding: $espacamento_medio 0;
     }
 
     @include d(tablet-up) {
-      padding: 0 1.5rem;
+      padding: 0 $espacamento_grande;
     }
   }
 }

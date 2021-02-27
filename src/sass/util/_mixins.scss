@@ -56,3 +56,8 @@ $desktop-up: 1800;
 @function alturaLinha($tamanhoTexto) {
   @return $tamanhoTexto * 1.5 + px;
 }
+
+// Duas linhas uma laranja e uma verde embaixo do elemento
+@mixin linhasBottom {
+  box-shadow: 0 1px 0 $laranja, 0 4px 0 #fff, 0 5px 0 $verde;
+}
