@@ -4,7 +4,7 @@
 
 <h1 align="center">
   <a href="https://matheusgomesweb.github.io/supermercados-magmaxx-website/">
-    🔗 Site dos supermercados magmaxx
+    🔗 Supermercados magmaxx
   </a> 
 </h1>
 
