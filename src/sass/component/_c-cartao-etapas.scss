@@ -123,6 +123,15 @@ $componentName: "c-cartao-etapas";
         border: 1px solid $verdeClaro;
       }
     }
+
+    // a:link
+    & a {
+      color: $branco;
+      text-decoration: none;
+      &:hover {
+        color: $preto;
+      }
+    }
   }
 
   // qr code

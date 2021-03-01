@@ -70,6 +70,13 @@ $component_name: ".l-empresa";
         padding-right: 0;
         margin-top: $espacamento_medio;
       }
+
+      // Citação
+      & cite,
+      blockquote {
+        font-weight: bold;
+        font-style: italic;
+      }
     }
 
     // Content: Visão
