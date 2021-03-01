@@ -1,0 +1,3 @@
+[submodule "magmaxx-wordpress"]
+	path = magmaxx-wordpress
+	url = https://github.com/MatheusGomesWeb/magmaxx-wordpress.git
