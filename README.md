@@ -4,12 +4,12 @@
 
 <h1 align="center">
   <a href="https://matheusgomesweb.github.io/supermercados-magmaxx-website/">
-    🔗 Website dos Supermercados Magmaxx
+    🔗 Site dos supermercados magmaxx
   </a> 
 </h1>
 
 <p align="center">
-  Website dos <strong>Supermercados Magmaxx</strong> mostrando os produtos da empresa, história, dicas e formulario de contato.
+  Site dos <strong>supermercados magmaxx</strong> mostrando os produtos da empresa, história, dicas e formulario de contato.
 </p>
 
 <p align="center"><b>Concluído</b> :heavy_check_mark:</p>
